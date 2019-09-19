@@ -32,7 +32,7 @@ Here some variations of invokers implementations:
 
 The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands.
 
-The [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs) works similar to the queue, however it dispatched commands after a timer.
+The [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), although it works similar to the queue, it only dispatches commands only after a timer.
 
 #### Actor 
 The [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs) is one of the data encapsulated in each command for a future usage, its implementation depends completely of the application scope.
