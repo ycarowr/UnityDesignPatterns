@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ywryc\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ywryc\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_DesignPatterns.-69381975.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ywryc\Documents\Projects\DesignPatterns" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Behavior" t="Include">
+          <e p="Command" t="Include">
+            <e p="Examples" t="Include">
+              <e p="AnimationQueue" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AnimationQueue.cs" t="Include" />
+                  <e p="Animations.cs" t="Include" />
+                  <e p="AnimationSender.cs" t="Include" />
+                  <e p="MotionEntity.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Structure" t="Include">
+              <e p="Command.cs" t="Include" />
+            </e>
+            <e p="Tools" t="Include">
+              <e p="CommandQueue.cs" t="Include" />
+              <e p="ICommandQueue.cs" t="Include" />
+              <e p="TimeredCommandQueue.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Utils" t="Include">
+          <e p="Attributes" t="Include">
+            <e p="ButtonAttribute.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ButtonAttributeInspectors.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UiMotion" t="Include">
+            <e p="IUiMotion.cs" t="Include" />
+            <e p="IUiMotionHandler.cs" t="Include" />
+            <e p="UiMotion.cs" t="Include" />
+            <e p="UiMotionBase.cs" t="Include" />
+            <e p="UiMotionMovement.cs" t="Include" />
+            <e p="UiMotionRotation.cs" t="Include" />
+            <e p="UiMotionScale.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="DesignPatterns.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
