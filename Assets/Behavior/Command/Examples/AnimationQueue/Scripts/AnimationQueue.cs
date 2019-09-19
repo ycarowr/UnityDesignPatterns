@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AnimationQueue
 {
     /// <summary>
-    ///     A animation processor.
+    ///     An animation processor.
     /// </summary>
     public class AnimationQueue : TimeredCommandQueue<BaseMotionAnimation>
     {

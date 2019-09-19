@@ -4,7 +4,7 @@ using UnityEngine;
 namespace AnimationQueue
 {
     /// <summary>
-    ///     An motion animation of the game.
+    ///     A motion animation of the game.
     /// </summary>
     public abstract class BaseMotionAnimation : Command
     {
