@@ -5,10 +5,13 @@ using UnityEngine;
 namespace AnimationQueue
 {
     /// <summary>
-    ///     An animation processor.
+    ///     An animation processor. It invokes commands.
     /// </summary>
     public class AnimationQueue : TimeredCommandQueue<BaseMotionAnimation>
     {
+        /// <summary>
+        ///     A animation type.
+        /// </summary>
         public enum AnimationType
         {
             MoveLeft, MoveRight, RotateLeft, RotateRight, ScaleUp, ScaleDown
@@ -53,13 +56,13 @@ namespace AnimationQueue
         /// </summary>
         /// <param name="type"></param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public void Animate(AnimationType type)
+        public void InvokeAnimation(AnimationType type)
         {
             switch (type)
             {
                 case AnimationType.MoveLeft: Enqueue(MoveLeft);
                     break;
-                case AnimationType.MoveRight: Enqueue(MoveRight);
+                case AnimationType.MoveRight: Enqueue(MoveRight); 
                     break;
                 case AnimationType.RotateLeft: Enqueue(RotateLeft);
                     break;

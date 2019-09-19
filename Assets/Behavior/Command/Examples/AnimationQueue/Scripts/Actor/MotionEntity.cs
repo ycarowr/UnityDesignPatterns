@@ -2,14 +2,9 @@
 
 namespace AnimationQueue
 {
-    public interface IMotion
-    {
-        Transform transform { get; }
-        void Move(Vector3 amount);
-        void Scale(Vector3 amount);
-        void Rotate(Vector3 amount);
-    }
-
+    /// <summary>
+    ///     Concrete actor class, also called receiver, it is called by the command class.
+    /// </summary>
     public class MotionEntity : MonoBehaviour, IMotion
     {
         /// <summary>

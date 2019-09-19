@@ -3,8 +3,11 @@ using UnityEngine;
 
 namespace AnimationQueue
 {
+    /// <summary>
+    ///     A client requesting to animations to the animation queue.
+    /// </summary>
     [RequireComponent(typeof(AnimationQueue))]
-    public class AnimationSender : MonoBehaviour
+    public class AnimationClient : MonoBehaviour
     {
         //Pointer to the animation queue.
         AnimationQueue AnimationQueue { get; set; }
@@ -17,37 +20,37 @@ namespace AnimationQueue
         [Button]
         void EnqueueMoveLeft()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.MoveLeft);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
         }
 
         [Button]
         void EnqueueMoveRight()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.MoveRight);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
         }
 
         [Button]
         void EnqueueRotateLeft()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.RotateLeft);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateLeft);
         }
 
         [Button]
         void EnqueueRotateRight()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.RotateRight);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateRight);
         }
 
         [Button]
         void EnqueueScaleUp()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.ScaleUp);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleUp);
         }
 
         [Button]
         void EnqueueScaleDown()
         {
-            AnimationQueue.Animate(AnimationQueue.AnimationType.ScaleDown);
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleDown);
         }
 
         [Button]
@@ -63,7 +66,7 @@ namespace AnimationQueue
                 AnimationQueue.AnimationType.ScaleDown
             };
             
-            AnimationQueue.Animate(values[UnityEngine.Random.Range(0, values.Length)]);
+            AnimationQueue.InvokeAnimation(values[UnityEngine.Random.Range(0, values.Length)]);
         }
 
         [Button]

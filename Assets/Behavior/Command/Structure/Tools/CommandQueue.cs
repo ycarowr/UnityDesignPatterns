@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace Patterns
 {
+    /// <summary>
+    ///     A command queue where the first enqueued command executes first (FIFO).
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class CommandQueue<T> : MonoBehaviour, ICommandQueue<T> where T : Command
     {
         /// <summary>

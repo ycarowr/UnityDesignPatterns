@@ -3,7 +3,11 @@ using UnityEngine;
 
 namespace Patterns
 {
-    public class TimeredCommandQueue<T> : CommandQueue<T> where T : Command
+    /// <summary>
+    ///     An command invoker class able to temporize commands and execute them over-time.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class TimeredCommandQueue<T> : CommandQueue<T> where T : Command
     {
         [Tooltip("Time until dequeue the next command.")] [SerializeField] [Range(0.1f, 5)]
         float dequeueTime = 1f;
