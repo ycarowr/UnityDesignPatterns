@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AnimationQueue
+namespace Command.AnimationQueue
 {
     /// <summary>
     ///     Concrete actor class, also called receiver, it is called by the command class.

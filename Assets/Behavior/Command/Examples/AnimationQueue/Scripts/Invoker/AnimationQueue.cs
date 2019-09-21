@@ -2,7 +2,7 @@
 using Patterns;
 using UnityEngine;
 
-namespace AnimationQueue
+namespace Command.AnimationQueue
 {
     /// <summary>
     ///     An animation processor. It invokes commands.

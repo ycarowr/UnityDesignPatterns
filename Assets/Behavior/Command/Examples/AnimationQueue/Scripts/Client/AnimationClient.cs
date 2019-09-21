@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AnimationQueue
+namespace Command.AnimationQueue
 {
     /// <summary>
     ///     A client requesting to animations to the animation queue.

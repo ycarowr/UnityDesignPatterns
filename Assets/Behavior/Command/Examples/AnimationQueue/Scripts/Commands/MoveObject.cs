@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AnimationQueue
+namespace Command.AnimationQueue
 {
     /// <summary>
     ///     A command to move a determined object.
