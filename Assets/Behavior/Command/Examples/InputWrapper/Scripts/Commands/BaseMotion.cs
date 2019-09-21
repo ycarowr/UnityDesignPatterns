@@ -2,12 +2,10 @@ using UnityEngine;
 
 namespace Command.InputWrapper
 {
-    using Patterns;
-    
     /// <summary>
     ///     A motion animation of the game.
     /// </summary>
-    public abstract class BaseMotion : Command
+    public abstract class BaseMotion : Patterns.Command
     {
         protected BaseMotion(IMotion entity, Vector3 amount)
         {
@@ -19,7 +17,7 @@ namespace Command.InputWrapper
         public Vector3 Amount { get; }
 
         /// <summary>
-        ///     Executes the animation.
+        ///     Executes the movement.
         /// </summary>
         public override void Execute()
         {

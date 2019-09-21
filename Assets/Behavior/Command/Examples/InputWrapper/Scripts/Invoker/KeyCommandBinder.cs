@@ -1,10 +1,7 @@
-﻿using System.Linq.Expressions;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Command.InputWrapper
 {
-    using Patterns;
-    
     /// <summary>
     ///     A component that binds a input key to any command.
     /// </summary>
@@ -12,7 +9,7 @@ namespace Command.InputWrapper
     {
         protected abstract KeyCode Key { get; }
         BaseMotion Command { get; set; }
-        
+
         void Start()
         {
             Command = GetCommand();
@@ -20,7 +17,7 @@ namespace Command.InputWrapper
 
         void Update()
         {
-            if(Input.GetKey(Key))
+            if (Input.GetKey(Key))
                 Command?.Execute();
         }
 

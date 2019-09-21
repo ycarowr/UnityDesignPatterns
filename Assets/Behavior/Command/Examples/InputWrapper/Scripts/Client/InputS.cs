@@ -2,14 +2,13 @@
 
 namespace Command.InputWrapper
 {
-    using Patterns;
-    
     /// <summary>
-    ///     A component that checks the input and dispatches a command.
+    ///     Class responsible to specify the bond key and the command.
     /// </summary>
     public class InputS : BaseInput
     {
         protected override KeyCode Key => KeyCode.S;
+
         protected override BaseMotion GetCommand()
         {
             return new MotionDown(MotionEntity);

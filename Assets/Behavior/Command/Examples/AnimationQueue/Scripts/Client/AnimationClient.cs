@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Command.AnimationQueue
 {
@@ -56,7 +55,7 @@ namespace Command.AnimationQueue
         [Button]
         void AnimateRandomly()
         {
-            var values = new []
+            var values = new[]
             {
                 AnimationQueue.AnimationType.MoveLeft,
                 AnimationQueue.AnimationType.MoveRight,
@@ -65,14 +64,14 @@ namespace Command.AnimationQueue
                 AnimationQueue.AnimationType.ScaleUp,
                 AnimationQueue.AnimationType.ScaleDown
             };
-            
-            AnimationQueue.InvokeAnimation(values[UnityEngine.Random.Range(0, values.Length)]);
+
+            AnimationQueue.InvokeAnimation(values[Random.Range(0, values.Length)]);
         }
 
         [Button]
         void Animate10xRandomly()
         {
-            for (int i = 0; i < 10; ++i)
+            for (var i = 0; i < 10; ++i)
                 AnimateRandomly();
         }
     }

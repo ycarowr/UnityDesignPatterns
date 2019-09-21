@@ -2,8 +2,6 @@
 
 namespace Command.InputWrapper
 {
-    using Patterns;
-    
     /// <summary>
     ///     Binds the motion entity component to the same game object as the key binder.
     /// </summary>

@@ -1,11 +1,9 @@
 namespace Command.AnimationQueue
 {
-    using Patterns;
-
     /// <summary>
     ///     A motion animation of the game.
     /// </summary>
-    public abstract class BaseMotionAnimation : Command
+    public abstract class BaseMotionAnimation : Patterns.Command
     {
         protected BaseMotionAnimation(IMotion entity)
         {
