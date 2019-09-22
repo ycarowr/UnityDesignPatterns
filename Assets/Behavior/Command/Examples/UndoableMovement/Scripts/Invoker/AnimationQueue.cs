@@ -10,8 +10,6 @@ namespace Command.UndoableMovement
     /// </summary>
     public class AnimationQueue : TimeredCommandQueue<BaseMotionAnimation>
     {
-        List<BaseMotionAnimation> register = new List<BaseMotionAnimation>();
-        
         /// <summary>
         ///     A animation type.
         /// </summary>
@@ -27,6 +25,8 @@ namespace Command.UndoableMovement
         [Tooltip("The entity which will be affected by the animations.")] [SerializeField]
         MotionEntity Entity;
 
+        readonly List<BaseMotionAnimation> register = new List<BaseMotionAnimation>();
+
         /// <summary>
         ///     Enqueues an animation based on its type.
         /// </summary>
@@ -34,10 +34,10 @@ namespace Command.UndoableMovement
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void InvokeAnimation(AnimationType type)
         {
-            var command = type == AnimationType.MoveLeft 
+            var command = type == AnimationType.MoveLeft
                 ? new MoveObject(Entity, -moveAmount)
                 : new MoveObject(Entity, moveAmount);
-            
+
             register.Add(command);
             Enqueue(command);
         }
@@ -47,7 +47,7 @@ namespace Command.UndoableMovement
             var last = register.Count - 1;
             if (last < 0)
                 return;
-            
+
             var command = register[last];
             register.Remove(command);
         }

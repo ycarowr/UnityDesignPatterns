@@ -1,7 +1,7 @@
+using Patterns;
+
 namespace Command.UndoableMovement
 {
-    using Patterns;
-    
     /// <summary>
     ///     A motion animation of the game.
     /// </summary>
