@@ -1,3 +1,3 @@
 # DesignPatterns
 
-A serie of studies about Design Patterns applied on Unity.
+A serie of studies about Design Patterns applied in Unity.
