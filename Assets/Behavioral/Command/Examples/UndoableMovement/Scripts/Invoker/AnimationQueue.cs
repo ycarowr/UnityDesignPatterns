@@ -22,10 +22,10 @@ namespace Command.UndoableMovement
         //define the motion amounts
         readonly Vector3 moveAmount = new Vector3(1, 0, 0);
 
+        readonly List<BaseMotionAnimation> register = new List<BaseMotionAnimation>();
+
         [Tooltip("The entity which will be affected by the animations.")] [SerializeField]
         MotionEntity Entity;
-
-        readonly List<BaseMotionAnimation> register = new List<BaseMotionAnimation>();
 
         /// <summary>
         ///     Enqueues an animation based on its type.
