@@ -23,19 +23,108 @@ Notes:
 
 A base [Command](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Command.cs) defines a interface to assure the existence of the methods _Execute()_ and _Unexecute()_. 
 
+```
+    /// <summary>
+    ///     The command base class.
+    /// </summary>
+    public abstract class Command
+    {
+        public abstract void Execute();
+    }
+```
+
 The [Concrete Commands](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Commands) realize the implementation of the base class as well as encapsute the necessary data to call the method _Execute()_.
 
+```
+    /// <summary>
+    ///     A command to move a determined object.
+    /// </summary>
+    public class MoveObject : BaseMotionAnimation
+    {
+        public MoveObject(IMotion entity, Vector3 amount) : base(entity)
+        {
+            Start = MotionEntity.transform.position;
+            Amount = amount;
+        }
+
+        public Vector3 Start { get; }
+        public Vector3 Amount { get; }
+
+        public override void Execute()
+        {
+            MotionEntity.Move(Start + Amount);
+        }
+    }
+```
+
 #### Invoker
-The [Invoker](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Invoker/AnimationQueue.cs) class has the responsability of invoking the commands.
+The [Invoker](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Invoker/AnimationQueue.cs) class has the responsability to invoke commands.
+
+```
+        //...
+        ///     Enqueues an animation based on its type.
+        public void InvokeAnimation(AnimationType type)
+        {
+            switch (type)
+            {
+                case AnimationType.MoveLeft:
+                    Enqueue(MoveLeft);
+                    break;
+                case AnimationType.MoveRight:
+                    Enqueue(MoveRight);
+                    break;
+                case AnimationType.RotateLeft:
+                    Enqueue(RotateLeft);
+                    break;
+                case AnimationType.RotateRight:
+                    Enqueue(RotateRight);
+                    break;
+                case AnimationType.ScaleUp:
+                    Enqueue(ScaleUp);
+                    break;
+                case AnimationType.ScaleDown:
+                    Enqueue(ScaleDown);
+                    break;
+            }
+        }
+        //...
+```
 
 Here are some variations of invokers implementations:
-The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands. And the [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), although it works in a similar way but it only dispatches commands only after an amount of time.
+1. The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands. 
+2. [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), which works in a similar way, however it only dispatches commands only after an amount of time.
 
 #### Actor 
-An object or [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs) and a method with the apropriated parameters are the data encapsulated in each command for a future usage, its implementation depends completely of the application scope.
+An [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs)  with a method call and its parameters are the data encapsulated by the concrete commands. 
+The implementation depends completely of the application scope, in this case, a motion object.
+
+```
+    //An object in the world 
+    public interface IMotion
+    {
+        Transform transform { get; }
+        void Move(Vector3 amount);
+        void Scale(Vector3 amount);
+        void Rotate(Vector3 amount);
+    }
+```
 
 #### Client
-The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker call in order to create and dispatch commands. Like the actor implementation, works according to the application purposes.   
+The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker call in to dispatch commands.    
+
+```
+        //...
+        void EnqueueMoveLeft()
+        {
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
+        }
+
+        void EnqueueMoveRight()
+        {
+            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
+        }
+        //...
+```
 
 ##### References: 
 1. [Game Programming Patterns Book](https://gameprogrammingpatterns.com/command.html)
