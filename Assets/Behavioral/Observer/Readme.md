@@ -60,7 +60,7 @@ Implementation using [Delegates](https://github.com/ycarowr/DesignPatterns/blob/
 ```
 
 
-An alternative implementation that is more generic and universal. The [Publisher](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/Observer/Structure/Observer.cs) class keeps track of subjects, listeners and has holds the _Notify()_ method which is dispatched from other client classes. 
+An alternative implementation that is more generic and universal. It has a [Publisher](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/Observer/Structure/Observer.cs) class to keep track of subjects, listeners and has holds the _Notify()_ method which is dispatched from other client classes. 
 
 ```
         public void AddListener(IListener listener)
