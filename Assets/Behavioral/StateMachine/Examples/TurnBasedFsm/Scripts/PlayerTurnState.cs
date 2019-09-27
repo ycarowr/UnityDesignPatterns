@@ -1,6 +1,4 @@
-﻿using Patterns.StateMachine;
-
-namespace ExampleStateMachine
+﻿namespace ExampleStateMachine
 {
     public class PlayerTurnState : AiTurnState
     {

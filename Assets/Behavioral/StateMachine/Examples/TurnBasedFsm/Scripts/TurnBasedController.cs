@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ExampleStateMachine;
+﻿using ExampleStateMachine;
 using UnityEngine;
 
 public class TurnBasedController : MonoBehaviour
 {
-    TurnBasedStateMachine TurnBasedFsm = new TurnBasedStateMachine();
+    readonly TurnBasedStateMachine TurnBasedFsm = new TurnBasedStateMachine();
 
     void Awake()
     {
@@ -19,25 +17,25 @@ public class TurnBasedController : MonoBehaviour
         TurnBasedFsm.Update();
     }
     */
-    
+
     [Button]
     public void PlayerTurn()
     {
         TurnBasedFsm.PlayerTurn();
     }
-        
+
     [Button]
     public void AiTurn()
     {
         TurnBasedFsm.AiTurn();
     }
-    
+
     [Button]
     public void StartGame()
     {
         TurnBasedFsm.StartGame();
     }
-    
+
     [Button]
     public void EndGame()
     {
