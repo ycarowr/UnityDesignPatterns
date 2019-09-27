@@ -127,11 +127,12 @@ The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavi
 ```
 
 ##### References: 
-1. [Game Programming Patterns Book](https://gameprogrammingpatterns.com/command.html)
-2. [Source Making Article](https://sourcemaking.com/design_patterns/command)
-3. [Habrador Article](https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/)
-4. [Qian Mo Github](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern)
-5. [Naphier Github](https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern)
-6. [Christopher Okhravi Youtube](https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s)
-7. [Derek Banas Youtube](https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12)
+1. Book [Game Programming Patterns](https://gameprogrammingpatterns.com/command.html)
+2. Article [Source Making](https://sourcemaking.com/design_patterns/command)
+3. Article [Habrador](https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/)
+4. Github [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern)
+5. Github [Naphier](https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern)
+6. Youtube [Christopher Okhravi](https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s)
+7. Youtube [Derek Banas](https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12)
+8. UML [Java Design Patterns](https://java-design-patterns.com/patterns/command/)
 
