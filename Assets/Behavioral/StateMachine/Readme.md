@@ -75,8 +75,50 @@ Implementation on a simple enemy [Patrol](https://github.com/ycarowr/DesignPatte
 The extendable more complex hierarchical implementation of [FSM](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/BaseStateMachine.cs) which can also behave as a PushDownAutomata and keep track of the previous states. Due the stack and the register allocations this implementation uses much more memory than the enum implementation.
 
 [State Interface](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/IState.cs): Define the states operations.
-
+```
+    public interface IState
+    {
+        bool IsInitialized { get; }
+        void OnInitialize();
+        void OnEnterState();
+        void OnExitState();
+        void OnUpdate();
+        void OnClear();
+    }
+```
 Context Example: A [turn based state machine](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Examples/TurnBasedFsm/Scripts/TurnBasedStateMachine.cs) to control the turn flow in a turn-based game.
+
+```
+    public class TurnBasedStateMachine : BaseStateMachine
+    {
+        readonly AiTurnState aiTurn = new AiTurnState();
+        readonly EndGameState endGame = new EndGameState();
+        readonly PlayerTurnState playerTurn = new PlayerTurnState();
+        readonly StartGameState startGame = new StartGameState();
+//...
+//...
+        public void PlayerTurn()
+        {
+            PushState(playerTurn);
+        }
+
+        public void AiTurn()
+        {
+            PushState(aiTurn);
+        }
+
+        public void StartGame()
+        {
+            PushState(startGame);
+        }
+
+        public void EndGame()
+        {
+            PushState(endGame);
+        }
+    }
+
+```
 
 [Concrete States](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/StateMachine/Examples/TurnBasedFsm/Scripts): PlayerTurn, AiTurn, EndGame and StartGame are examples of States.
 
