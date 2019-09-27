@@ -13,7 +13,7 @@
 
 ### Structure
 
-Subject: Is the observed object target of a listener, usually when this object changes the state the interested listeners have to be notified.
+Subject: Is the observed object abd target of a listener, usually when this object changes the state the interested listeners have to be notified.
 
 Listener: Is the observer of the subject, waits for any notification or state change of the interested object.
 
