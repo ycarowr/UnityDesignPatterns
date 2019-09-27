@@ -1,12 +1,80 @@
 
-
 # State Machine 
 
 ## Definitions
 
+"Allow an object to alter its behavior when its internal state changes."
+
+"The state pattern, which closely resembles Strategy Pattern, is a behavioral software design pattern, also known as the objects for states pattern. This pattern is used in computer programming to encapsulate varying behavior for the same object based on its internal state."
+
 ### Structure
 
+State: "The State interface declares the state-specific methods. These methods should make sense for all concrete states because you don’t want some of your states to have useless methods that will never be called."
+
+Concrete States: "They provide their own implementations for the state-specific methods. To avoid duplication of similar code across multiple states, you may provide intermediate abstract classes that encapsulate some common behavior."
+
+Context: "Context stores a reference to one of the concrete state objects and delegates to it all state-specific work. The context communicates with the state object via the state interface. The context exposes a setter for passing it a new state object."
+
+
+Implementation on a simple enemy [Patrol](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Examples/EnemyPatrol/Scripts/Patrol.cs) using an enumeration to illustrate the states:
+
+```
+//...
+        Vector3 PointA { get; }
+        Vector3 PointB { get; }
+        State Current { get; set; }
+        
+        enum State
+        {
+            PointA,
+            PointB,
+            WalkA,
+            WalkB
+        }
+        
+        void GoTo(State next)
+        {
+            Current = next;
+            Next();
+        }
+        
+        //next state execution
+        void Next()
+        {
+            switch (Current)
+            {
+                case State.PointA:
+                    IdleRoutine = Handler.StartCoroutine(StayA());
+                    break;
+                case State.PointB:
+                    IdleRoutine = Handler.StartCoroutine(StayB());
+                    break;
+                case State.WalkA:
+                    WalkTowardsA();
+                    break;
+                case State.WalkB:
+                    WalkTowardsB();
+                    break;
+            }
+        }
+// ...
+```
+
+
+Hierarchical Implementation [FSM](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/BaseStateMachine.cs): 
+
+
+
+When to use: 
+
+1. You have an entity whose behavior changes based on some internal state.
+2. That state can be rigidly divided into one of a relatively small number of distinct options.
+3. The entity responds to a series of inputs or events over time.
+
 Notes: 
+1. Don't go fancy with FSMs because things can end up weird: "State machines help you untangle hairy code by enforcing a very constrained structure on it. All you’ve got is a fixed set of states, a single current state, and some hardcoded transitions."
+2. It's fine to use more than one FSM, sometimes they will scratch each other with an ``if not state`` statement.
+3. Enum implementations are much much lighter in memory.
 
 References:
 1. Youtube [Derek Banas](https://www.youtube.com/watch?v=MGEx35FjBuo&list=PLF206E906175C7E07&index=20)
