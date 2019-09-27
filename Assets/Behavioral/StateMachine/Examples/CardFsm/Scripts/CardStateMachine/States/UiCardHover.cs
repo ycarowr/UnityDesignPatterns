@@ -6,7 +6,7 @@ namespace CardStateMachine
     {
         //--------------------------------------------------------------------------------------------------------------
 
-        public UiCardHover(PushDownAutomata fsm) : base(fsm)
+        public UiCardHover(BaseStateMachine fsm) : base(fsm)
         {
         }
     }

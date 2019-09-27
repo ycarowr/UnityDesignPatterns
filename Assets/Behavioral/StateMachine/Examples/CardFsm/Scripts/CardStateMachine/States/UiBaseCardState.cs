@@ -8,13 +8,13 @@ namespace CardStateMachine
     /// </summary>
     public abstract class UiBaseCardState : IState
     {
-        protected UiBaseCardState(PushDownAutomata fsm)
+        protected UiBaseCardState(BaseStateMachine fsm)
         {
             Fsm = fsm;
             IsInitialized = true;
         }
 
-        protected PushDownAutomata Fsm { get; }
+        protected BaseStateMachine Fsm { get; }
         public bool IsInitialized { get; }
 
         //--------------------------------------------------------------------------------------------------------------

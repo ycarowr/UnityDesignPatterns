@@ -5,7 +5,7 @@ namespace CardStateMachine
     /// <summary>
     ///     State Machine that holds all states of a UI Card.
     /// </summary>
-    public class UiCardFsm : PushDownAutomata
+    public class UiCardFsm : BaseStateMachine
     {
         //--------------------------------------------------------------------------------------------------------------
 

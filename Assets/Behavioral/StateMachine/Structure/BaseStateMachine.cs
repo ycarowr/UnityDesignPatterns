@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Patterns.StateMachine
 {
-    public abstract class PushDownAutomata
+    public abstract class BaseStateMachine
     {
         //----------------------------------------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ namespace Patterns.StateMachine
         ///     Constructor for the state machine. A handler is optional.
         /// </summary>
         /// <param name="handler"></param>
-        protected PushDownAutomata(IStateMachineHandler handler = null)
+        protected BaseStateMachine(IStateMachineHandler handler = null)
         {
             Handler = handler;
         }

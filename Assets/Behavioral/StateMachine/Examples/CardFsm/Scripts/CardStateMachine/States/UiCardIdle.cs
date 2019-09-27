@@ -9,7 +9,7 @@ namespace CardStateMachine
     {
         //--------------------------------------------------------------------------------------------------------------
 
-        public UiCardIdle(PushDownAutomata fsm) : base(fsm)
+        public UiCardIdle(BaseStateMachine fsm) : base(fsm)
         {
         }
     }

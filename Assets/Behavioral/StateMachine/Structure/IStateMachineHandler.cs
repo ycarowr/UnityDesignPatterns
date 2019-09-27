@@ -7,7 +7,7 @@ namespace Patterns.StateMachine
     /// </summary>
     public interface IStateMachineHandler
     {
-        PushDownAutomata Fsm { get; }
+        BaseStateMachine Fsm { get; }
         MonoBehaviour MonoBehaviour { get; }
     }
 }

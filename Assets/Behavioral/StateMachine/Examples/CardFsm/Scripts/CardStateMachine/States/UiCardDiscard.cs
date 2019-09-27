@@ -7,7 +7,7 @@ namespace CardStateMachine
     /// </summary>
     public class UiCardDiscard : UiBaseCardState
     {
-        public UiCardDiscard(PushDownAutomata fsm) : base(fsm)
+        public UiCardDiscard(BaseStateMachine fsm) : base(fsm)
         {
         }
     }

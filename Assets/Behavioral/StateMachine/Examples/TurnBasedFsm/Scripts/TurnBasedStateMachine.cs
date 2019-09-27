@@ -2,7 +2,7 @@
 
 namespace ExampleStateMachine
 {
-    public class TurnBasedStateMachine : PushDownAutomata
+    public class TurnBasedStateMachine : BaseStateMachine
     {
         readonly AiTurnState aiTurn = new AiTurnState();
 
