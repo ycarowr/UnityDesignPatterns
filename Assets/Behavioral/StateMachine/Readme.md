@@ -7,6 +7,8 @@
 
 "The state pattern, which closely resembles Strategy Pattern, is a behavioral software design pattern, also known as the objects for states pattern. This pattern is used in computer programming to encapsulate varying behavior for the same object based on its internal state."
 
+"State machines help you untangle hairy code by enforcing a very constrained structure on it. All you’ve got is a fixed set of states, a single current state, and some hardcoded transitions."
+
 When to use: 
 
 1. You have an entity whose behavior changes based on some internal state.
@@ -14,9 +16,11 @@ When to use:
 3. The entity responds to a series of inputs or events over time.
 
 Notes: 
-1. Don't go fancy with FSMs because things can end up weird: "State machines help you untangle hairy code by enforcing a very constrained structure on it. All you’ve got is a fixed set of states, a single current state, and some hardcoded transitions."
-2. It's fine to use more than one FSM, sometimes they will scratch each other with an ``if not state`` statement.
-3. Enum implementations are much much lighter in memory.
+1. Don't go too fancy with FSMs because things can end up weird, keep the number of states manageable;
+2. It's fine to use more than one FSM, sometimes they will scratch each other with an ``if not state`` statement;
+3. There are cases to implement Sub State Machines deep inside a single state;
+4. Enum implementations are usually lighter than hierarchical ones because they don't have dinamic dispatcher, vtables.
+5. Push-Down Automata costs memory to keep track of what is stacked.
 
 ### Structure
 
