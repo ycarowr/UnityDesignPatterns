@@ -38,17 +38,11 @@ An object or [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Asset
 The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker call in order to create and dispatch commands. Like the actor implementation, works according to the application purposes.   
 
 ##### References: 
-[Game Programming Patterns Book](https://gameprogrammingpatterns.com/command.html)
-
-[Source Making Article](https://sourcemaking.com/design_patterns/command)
-
-[Habrador Article](https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/)
-
-[Qian Mo Github](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern)
-
-[Naphier Github](https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern)
-
-[Christopher Okhravi Youtube](https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s)
-
-[Derek Banas Youtube](https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12)
+1. [Game Programming Patterns Book](https://gameprogrammingpatterns.com/command.html)
+2. [Source Making Article](https://sourcemaking.com/design_patterns/command)
+3. [Habrador Article](https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/)
+4. [Qian Mo Github](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern)
+5. [Naphier Github](https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern)
+6. [Christopher Okhravi Youtube](https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s)
+7. [Derek Banas Youtube](https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12)
 
