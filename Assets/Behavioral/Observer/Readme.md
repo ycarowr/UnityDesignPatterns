@@ -13,9 +13,9 @@
 
 ### Structure
 
-Subject: Is the observed object abd target of a listener, usually when this object changes the state the interested listeners have to be notified.
+Subject: Is the observed object and target of a listener, usually when this object changes the state the interested listeners have to be notified.
 
-Listener: Is the observer of the subject, waits for any notification or state change of the interested object.
+Listener: Is the observer of the subject, waits for any change on the interested object.
 
 Publisher: Usually is the object resposible to notify the listeners, it most likely has some sort of register to keep track of the listers and what they are watching.
 
