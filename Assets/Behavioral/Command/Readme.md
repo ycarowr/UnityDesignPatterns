@@ -21,15 +21,15 @@ Notes:
 
 #### Command
 
-A [base class Command](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Command.cs) class which defines a interface realized by concrete commands. 
+A base [Command](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Command.cs) defines a interface to assure the existence of the methods _Execute()_ and _Unexecute()_. 
 
-All the [concrete Commands](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Commands) encapsute the parameters and the objects necessary for a future call to determined object.
+The [Concrete Commands](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Commands) realize the implementation of the base class as well as encapsute the necessary data to call the method _Execute()_.
 
 #### Invoker
-The concrete [Invoker](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Invoker/AnimationQueue.cs) class which has the responsability of invoking commands.
+The [Invoker](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Invoker/AnimationQueue.cs) class has the responsability of invoking the commands.
 
 Here are some variations of invokers implementations:
-The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands. The [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), although it works similar to the queue, it only dispatches commands only after a timer.
+The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands. And the [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), although it works in a similar way but it only dispatches commands only after an amount of time.
 
 #### Actor 
 An object or [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs) and a method with the apropriated parameters are the data encapsulated in each command for a future usage, its implementation depends completely of the application scope.
@@ -38,10 +38,11 @@ An object or [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Asset
 The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker call in order to create and dispatch commands. Like the actor implementation, works according to the application purposes.   
 
 ##### References: 
-https://gameprogrammingpatterns.com/command.html
-https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12
-https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s
-https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/
-https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern
-https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern
-https://sourcemaking.com/design_patterns/command
+[Game Programming Patterns Book](https://gameprogrammingpatterns.com/command.html)
+[Source Making Article](https://sourcemaking.com/design_patterns/command)
+[Habrador Article](https://www.habrador.com/tutorials/programming-patterns/1-command-pattern/)
+[Qian Mo Github](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Behavioral%20Patterns/Command%20Pattern)
+[Naphier Github](https://github.com/Naphier/unity-design-patterns/tree/master/Assets/command%20pattern)
+[Christopher Okhravi Youtube](https://www.youtube.com/watch?v=9qA5kw8dcSU&list=PLDyBXGLPIsoNB6Hq0Y1fdT5146kTfxem4&index=26&t=830s)
+[Derek Banas Youtube](https://www.youtube.com/watch?v=7Pj5kAhVBlg&list=PLF206E906175C7E07&index=12)
+
