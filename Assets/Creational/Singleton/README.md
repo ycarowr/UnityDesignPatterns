@@ -100,6 +100,7 @@ You definitely can go crazy digging for a bug in a script which is not even insi
 #### Tests
 
 I made some quick tests for some singletons
+
 ![alt](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Tests/Images/singleton%20test.GIF)
 
 ### References:
