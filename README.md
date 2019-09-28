@@ -21,6 +21,7 @@ On going studies about Design Patterns applied in Unity3D and C#.
 3. Book [Game Programmings Patterns](https://gameprogrammingpatterns.com/contents.html)
 4. Github examples [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern)
 5. Github examples [Rivello](https://github.com/srivello/UnityDesignPatterns)
+6. Github examples [Naphier](https://github.com/Naphier/unity-design-patterns)
 6. Article, UML and examples [Source Making](https://sourcemaking.com/design_patterns)
 7. Articles, UML and examples [Guru](https://refactoring.guru/design-patterns)
 8. Articles and examples[Habrador](https://www.habrador.com/tutorials/programming-patterns)
