@@ -24,9 +24,9 @@ What to do instead:
 
 ### Implementation 
 
-Using Unity I've found three common ways to use Singletons:
+I've found three common ways to use singletons in Unity and the implementations are slightly different because of the Monobehaviors.
 
-The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation:
+The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation. If you don't need Monohaviors, use this version:
 
 ```
     public class Singleton<T> where T : class, new()
@@ -98,3 +98,8 @@ References:
 4. Github [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Creational%20Patterns/Singleton%20Pattern)
 5. Article [Source Making](https://sourcemaking.com/design_patterns/singleton)
 6. Article [Guru](https://refactoring.guru/design-patterns/singleton)
+
+Threads with people talking about singleton implementations:
+1. https://csharpindepth.com/articles/singleton
+2. https://stackoverflow.com/questions/2319075/generic-singletont
+3. https://codereview.stackexchange.com/questions/10554/a-generic-singleton
