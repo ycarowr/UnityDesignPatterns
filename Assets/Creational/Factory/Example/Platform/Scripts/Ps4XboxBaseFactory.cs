@@ -16,7 +16,7 @@ public class Ps4XboxBaseFactory<TPs4, TXbox, TBase>
 
     public static TBase CreateSystem(RuntimePlatform platform)
     {
-        if (platform != RuntimePlatform.PS4 || platform != RuntimePlatform.XboxOne)
+        if (platform != RuntimePlatform.PS4 && platform != RuntimePlatform.XboxOne)
             Debug.LogError("Platform not supported: " + platform);
 
         if (platform == RuntimePlatform.PS4)
