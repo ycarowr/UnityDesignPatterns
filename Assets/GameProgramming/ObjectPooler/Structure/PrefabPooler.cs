@@ -5,18 +5,17 @@ namespace Patterns
 {
     public class PrefabPooler : MonoBehaviour
     {
+        readonly Dictionary<GameObject, List<GameObject>> available =
+            new Dictionary<GameObject, List<GameObject>>();
+
+        readonly Dictionary<GameObject, List<GameObject>> busy =
+            new Dictionary<GameObject, List<GameObject>>();
+
         [Tooltip("All pooled models have to be inside this array before the initialization")] [SerializeField]
         GameObject[] models;
 
         [Tooltip("How many objects will be created as soon as the game loads")] [SerializeField]
         int startSize = 10;
-        //--------------------------------------------------------------------------------------------------------------
-
-        Dictionary<GameObject, List<GameObject>> busy =
-            new Dictionary<GameObject, List<GameObject>>();
-
-        Dictionary<GameObject, List<GameObject>> available =
-            new Dictionary<GameObject, List<GameObject>>();
 
         public int StartSize => startSize;
         public GameObject[] Models => models;
@@ -75,9 +74,7 @@ namespace Patterns
         #region Operations
 
         /// <summary>
-        ///     Here you can pool the prefab objects. Currently the key is a reference to the prefab that you need to get.
-        ///     Although I haven't had problems with this approach, you can come up with a solution that performs better
-        ///     using an enumeration as key.
+        ///     Get the prefab objects. Can be replaces by using an enumeration as key in order to optimize.
         /// </summary>
         /// <param name="prefabModel"></param>
         /// <returns></returns>
@@ -115,14 +112,7 @@ namespace Patterns
 
             return pooledObj;
         }
-
-        /// <summary>
-        ///     Here you can pool the prefab objects. Currently the key is a reference to the prefab that you need to get.
-        ///     Although I haven't had problems with this approach, you can come up with a solution that performs better
-        ///     using an enumeration as key.
-        /// </summary>
-        /// <param name="prefabModel"></param>
-        /// <returns></returns>
+        
         public virtual T1 Get<T1>(GameObject prefabModel) where T1 : class
         {
             var obj = Get(prefabModel);
@@ -130,8 +120,7 @@ namespace Patterns
         }
 
         /// <summary>
-        ///     Here you pool back objects that you no longer use. They are deactivated and
-        ///     stored back for future usage using the prefab model as key to get it back later on.
+        ///     Here you pool back objects that you no longer use.
         /// </summary>
         /// <param name="prefabModel"></param>
         /// <param name="pooledObj"></param>
