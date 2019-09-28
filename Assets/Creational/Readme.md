@@ -26,7 +26,7 @@ What to do instead:
 
 I've found more or less three common variations of singletons in Unity and the implementations are slightly different because of the Monobehaviors.
 
-#### Pure Csharp
+#### 1. Pure Csharp
 The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation. Since it only relies on the constructor method is much simpler than the versions with Monobehaviors:
 
 ```
@@ -41,7 +41,7 @@ The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/As
     }
 ```
 
-#### Monobehavior
+#### 2. Monobehavior
 The second implementation in a [Monobehavior](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Monobehavior/SingletonMB.cs) class. I know we should avoid Monohaviors as much as possible, however, I think this type of Singleton still has his place in small projects. 
 
 
@@ -74,7 +74,7 @@ The Monobehavior initialization happens on the Awake method:
         //.. more stuff
 ```
 
-#### Persistent Monobehavior
+#### 3. Persistent Monobehavior
 
 I don't like this implementation very much. As you can tell, it is persistent. If you destroy the object
 and some other context call the Persistent Singleton it instantiates once again and might cause glinches on the FPS. Its also very hard to debug, the object is created at runtime and a Monobehavior is attached to it. 
