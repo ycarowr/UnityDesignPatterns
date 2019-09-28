@@ -24,9 +24,10 @@ What to do instead:
 
 ### Implementation 
 
-I've found three common ways to use singletons in Unity and the implementations are slightly different because of the Monobehaviors.
+I've found more or less three common variations of singletons in Unity and the implementations are slightly different because of the Monobehaviors.
 
-The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation. If you don't need Monohaviors, use this version:
+#### Pure Csharp
+The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation. Since it only relies on the constructor method is much simpler than the versions with Monobehaviors:
 
 ```
     public class Singleton<T> where T : class, new()
@@ -40,6 +41,7 @@ The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/As
     }
 ```
 
+#### Monobehavior
 The second implementation in a [Monobehavior](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Monobehavior/SingletonMB.cs) class. I know we should avoid Monohaviors as much as possible, however, I think this type of Singleton still has his place in small projects. 
 
 
@@ -72,9 +74,13 @@ The Monobehavior initialization happens on the Awake method:
         //.. more stuff
 ```
 
+#### Persistent Monobehavior
 
-A third version can be found. I don't like this implementation because as you can tell, is persistent. If you destroy it
-and some other context call the Persistent Singleton it instantiates once again and might cause glinches on the FPS.
+I don't like this implementation very much. As you can tell, it is persistent. If you destroy the object
+and some other context call the Persistent Singleton it instantiates once again and might cause glinches on the FPS. Its also very hard to debug, the object is created at runtime and a Monobehavior is attached to it. 
+
+You definitely can go crazy digging for a bug in a script which is not even inside the scene but is called from somewhere inside the code base.
+
 ```
         public class PersistentSingleton<T> : MonoBehaviour where T : Component
         {
@@ -88,7 +94,6 @@ and some other context call the Persistent Singleton it instantiates once again 
         
             //.. more stuff
         }
-
 ```
 
 References:
