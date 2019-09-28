@@ -101,7 +101,7 @@ You definitely can go crazy digging for a bug in a script which is not even insi
 
 I made some quick tests for some singletons
 
-![alt](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Tests/Images/singleton%20test.GIF)
+![alt](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Structure/Tests/Images/singleton%20test.GIF)
 
 ### References:
 1. Youtube [Derek Banas](https://www.youtube.com/watch?v=NZaXM67fxbs&list=PLF206E906175C7E07&index=7)
