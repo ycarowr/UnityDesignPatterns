@@ -7,7 +7,7 @@ On going studies about Design Patterns applied in Unity3D and C#.
   2. [Observer](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Observer)
   3. [State Machine](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/StateMachine)
 
-### Creatinal Patterns
+### Creational Patterns
   1. [Factory](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Factory)
   2. [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
 
