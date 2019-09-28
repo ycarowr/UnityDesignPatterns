@@ -3,11 +3,94 @@
 
 ## Definitions
 
-When to use: 
+"Ensure a class has one instance, and provide a global point of access to it."
 
-### 
+When to use it: 
+1. When you need to assure that only one instance has to be created;
+2. WHen you want to provide global access to an object;
+
+Bad things about Singletons: 
+1. "In the short term, the Singleton pattern is relatively benign. Like many design choices, we pay the cost in the long term. Once we’ve cast a few unnecessary singletons into cold hard code, here’s the trouble we’ve bought ourselves."
+2. They make it harder to reason about code.;
+3. They encourage coupling;
+4. They aren’t concurrency-friendly;
+5. Lazy initialization might take the control away from you.
+
+What to do instead:
+1. Pass it in using constructor;
+2. Get it from the base class;
+3. Get it from something already global;
+4. Service Locator Pattern.
 
 ### Implementation 
+
+Using Unity I've found three common ways to use Singletons:
+
+The first [Pure Csharp](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/PureCSharp/Singleton.cs) with lazy instatiation:
+
+```
+    public class Singleton<T> where T : class, new()
+    {
+        public static T Instance { get; private set; } = CreateInstance();
+        
+        static T CreateInstance()
+        {
+            return Instance ?? (Instance = new T()); 
+        }
+    }
+```
+
+The second implementation in a [Monobehavior](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Creational/Singleton/Monobehavior/SingletonMB.cs) class. I know we should avoid Monohaviors as much as possible, however, I think this type of Singleton still has his place in small projects. 
+
+
+```
+        public class SingletonMB<T> : MonoBehaviour where T : class
+        {
+            public static T Instance { get; private set; }
+            //More stuff
+        }
+```
+
+The Monobehavior initialization happens on the Awake method:
+```
+        //.. more stuff
+        protected virtual void Awake()
+        {
+            if (Instance == null)
+                Initialize();
+            else if (Instance as SingletonMB<T> != this) 
+                HandleDuplication();
+        }
+        
+        void Initialize()
+        {
+            Instance = this as T;
+            //sub classes have to override OnAwake
+            OnAwake();
+        }
+        
+        //.. more stuff
+```
+
+
+A third version can be found. I don't like this implementation because as you can tell, is persistent. If you destroy it
+and some other context call the Persistent Singleton it instantiates once again and might cause glinches on the FPS.
+```
+        public class PersistentSingleton<T> : MonoBehaviour where T : Component
+        {
+            //.. more stuff
+        
+            static void CreateInstance()
+            {
+                var go = new GameObject(typeof(T).ToString());
+                instance = go.AddComponent<T>();
+            }
+        
+            //.. more stuff
+        }
+
+```
+
 References:
 1. Youtube [Derek Banas](https://www.youtube.com/watch?v=NZaXM67fxbs&list=PLF206E906175C7E07&index=7)
 2. Youtube [Christopher Okhravi](https://www.youtube.com/watch?v=hUE_j6q0LTQ&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc&index=6)
