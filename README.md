@@ -9,7 +9,8 @@ On going studies about Design Patterns applied in Unity3D and C#.
 
 ### Creational Patterns
   1. [Factory](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Factory)
-  2. [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
+  2. [Factory Method](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/FactoryMethod)
+  3. [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
 
 ### Game Programming Patterns
   1. [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
