@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ConsoleSystemFactory<TPs4, TXbox, TBase> 
+public class Ps4XboxBaseFactory<TPs4, TXbox, TBase>
     where TPs4 : TBase, new()
     where TXbox : TBase, new()
 {
@@ -8,7 +8,7 @@ public class ConsoleSystemFactory<TPs4, TXbox, TBase>
     {
         return new TPs4();
     }
-    
+
     public static TXbox CreateXbox()
     {
         return new TXbox();
@@ -16,12 +16,12 @@ public class ConsoleSystemFactory<TPs4, TXbox, TBase>
 
     public static TBase CreateSystem(RuntimePlatform platform)
     {
-        if(platform != RuntimePlatform.PS4 || platform != RuntimePlatform.XboxOne)
-            Debug.LogError("Platform not supported: "+platform);
-        
+        if (platform != RuntimePlatform.PS4 || platform != RuntimePlatform.XboxOne)
+            Debug.LogError("Platform not supported: " + platform);
+
         if (platform == RuntimePlatform.PS4)
             return CreatePs4();
-        
+
         return CreateXbox();
     }
 }
