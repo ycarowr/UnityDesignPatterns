@@ -9,7 +9,7 @@ namespace Factory
     {
         public abstract string Move { get; }
 
-        public virtual void DoMove()
+        public void DoMove()
         {
             Debug.Log("My AI move is: " + Move);
         }
