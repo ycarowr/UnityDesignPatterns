@@ -112,7 +112,7 @@ namespace Patterns
 
             return pooledObj;
         }
-        
+
         public virtual T1 Get<T1>(GameObject prefabModel) where T1 : class
         {
             var obj = Get(prefabModel);
