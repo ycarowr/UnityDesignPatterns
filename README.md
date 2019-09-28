@@ -1,18 +1,18 @@
-# DesignPatterns
+## DesignPatterns
 
 On going studies about Design Patterns applied in Unity3D and C#.
 
-# Behavioral Patterns
-  ## [Command](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Command)
-  ## [Observer](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Observer)
-  ## [State Machine](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/StateMachine)
+### Behavioral Patterns
+  #### [Command](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Command)
+  #### [Observer](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Observer)
+  #### [State Machine](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/StateMachine)
 
-# Creatinal Patterns
-  ## [Factory](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Factory)
-  ## [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
+### Creatinal Patterns
+  #### [Factory](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Factory)
+  #### [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
 
-# Game Programming Patterns
-  ## [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
+### Game Programming Patterns
+  #### [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
 
 ### References
 
