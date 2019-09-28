@@ -3,8 +3,8 @@ using UnityEngine;
 namespace Patterns
 {
     /// <summary>
-    ///     Auto create Singleton Version from link:
-    ///     https://answers.unity.com/questions/576969/create-a-persistent-gameobject-using-singleton.html
+    ///     Auto create Singleton Version:
+    ///     Ref: https://answers.unity.com/questions/576969/create-a-persistent-gameobject-using-singleton.html
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class PersistentSingleton<T> : MonoBehaviour where T : Component
@@ -12,7 +12,7 @@ namespace Patterns
         static T instance;
 
         /// <summary>
-        ///     Static instance of PersistentGameObjectSingleton which allows it to be accessed by any other script.
+        ///     Static instance of Persistent which allows it to be accessed by any other script.
         /// </summary>
         public static T Instance
         {

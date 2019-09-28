@@ -1,7 +1,8 @@
 ﻿namespace Patterns
 {
     /// <summary>
-    ///     Pure C# Singleton Pattern. Refs below:
+    ///     Pure C# Singleton Pattern.
+    ///     Refs:
     ///     1. https://stackoverflow.com/questions/2319075/generic-singletont
     ///     2. https://codereview.stackexchange.com/questions/10554/a-generic-singleton
     /// </summary>
