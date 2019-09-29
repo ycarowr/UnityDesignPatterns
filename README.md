@@ -20,7 +20,7 @@ On going studies about Design Patterns applied in Unity3D and C#.
 
 1. Youtube Playlist [Christopher Okhravi](https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc)
 2. Youtube Playlist [Derek Banas](https://www.youtube.com/playlist?list=PLF206E906175C7E07)
-3. Book [Game Programmings Patterns](https://gameprogrammingpatterns.com/contents.html)
+3. Bob Nystrom [Game Programmings Patterns](https://gameprogrammingpatterns.com/contents.html)
 4. Github examples in Unity [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern)
 5. Github examples in Unity [Rivello](https://github.com/srivello/UnityDesignPatterns)
 6. Github examples in Unity [Naphier](https://github.com/Naphier/unity-design-patterns)
