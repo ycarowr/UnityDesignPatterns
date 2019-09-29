@@ -8,13 +8,18 @@
 "A hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products"" 
 
 Notes: 
-1. "The advantage of a Factory Method is that it can return the same instance multiple times, or can return a subclass rather than an object of that exact type."
-2. "The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method."
+
+Pros
+1. You can be sure that the products you’re getting from a factory are compatible with each other.
+2. avoid coupling between products and client code (calling "new" everywhere).
+3. Single Responsibility Principle. Products are created in their own factories.
+4. Open/Closed Principle. You can introduce new variants of products without breaking existing client code.
+
+Cons
+1. The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
 
 When to use it:
-1. when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
-2. when you want to provide users of your library or framework with a way to extend its internal components
-3. "when you want to save system resources by reusing existing objects instead of rebuilding them each time.", in this case the factory returns the same object multiple times saving a lot of memory.
+1. "Use the Abstract Factory when your code needs to work with various families of related products, but you don’t want it to depend on the concrete classes of those products—they might be unknown beforehand or you simply want to allow for future extensibility."
 
 ### Structure
 
