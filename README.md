@@ -25,4 +25,4 @@ On going studies about Design Patterns applied in Unity3D and C#.
 6. Github examples in Unity [Naphier](https://github.com/Naphier/unity-design-patterns)
 6. Quick look, UML and examples [Source Making](https://sourcemaking.com/design_patterns)
 7. Quick look, UML and examples [Guru](https://refactoring.guru/design-patterns)
-8. Quick look and examples[Habrador](https://www.habrador.com/tutorials/programming-patterns)
+8. Quick look and examples [Habrador](https://www.habrador.com/tutorials/programming-patterns)
