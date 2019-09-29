@@ -3,20 +3,20 @@ using UnityEngine;
 
 public partial class MonstersPrototype : MonoBehaviour
 {
-    //Store monsters 
-    readonly List<Monster> monsterRegister = new List<Monster>();
-    
     //Prototypes
     static readonly Ghost ghostPrototype = new Ghost(10, 15);
     static readonly Demon demonPrototype = new Demon(20, 30, 40);
-    
+    readonly Spawner<Demon> demonSpawnerGen = new Spawner<Demon>(demonPrototype);
+    readonly Spawner demonSpawnerLamb = new Spawner(demonPrototype.Clone);
+
     //Spawners with Generics
     readonly Spawner<Ghost> ghostSpawnerGen = new Spawner<Ghost>(ghostPrototype);
-    readonly Spawner<Demon> demonSpawnerGen = new Spawner<Demon>(demonPrototype);
 
     //Spawners with Lambda
     readonly Spawner ghostSpawnerLamb = new Spawner(ghostPrototype.Clone);
-    readonly Spawner demonSpawnerLamb = new Spawner(demonPrototype.Clone);
+
+    //Store monsters 
+    readonly List<Monster> monsterRegister = new List<Monster>();
 
     [Button]
     void SpawnDemons()
@@ -25,7 +25,7 @@ public partial class MonstersPrototype : MonoBehaviour
         monsterRegister.Add(demonSpawnerLamb.SpawnMonster());
         PrintMonsters();
     }
-    
+
     [Button]
     void SpawnGhosts()
     {

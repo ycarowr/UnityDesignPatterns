@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Prototype.PrototypeLess
 {
     public enum Element
     {
-        Cold, Poison, Fire, Light
+        Cold,
+        Poison,
+        Fire,
+        Light
     }
 
     public enum Spell
     {
-        Fireball, LightningBolt
+        Fireball,
+        LightningBolt
     }
 
     public enum Attack
@@ -22,6 +24,19 @@ namespace Prototype.PrototypeLess
     [CreateAssetMenu(menuName = "Prototypeless Data/Goblin")]
     public class GoblinData : ScriptableObject
     {
+        [SerializeField] Attack[] attacks;
+        [SerializeField] int maxHealth;
+        [SerializeField] int minHealth;
+
+        [SerializeField] string monsterName;
+        [SerializeField] Element[] resists;
+        [SerializeField] Spell[] spells;
+        [SerializeField] Element[] weaknesses;
+        
+        //-------------------------------------------------------------------------------------------------------------
+
+        #region Properties
+        
         public string Name => monsterName;
 
         public int MinHealth => MinHealth;
@@ -35,14 +50,7 @@ namespace Prototype.PrototypeLess
         public Spell[] Spells => Spells;
 
         public Attack[] Attacks => Attacks;
-
-        [SerializeField] string monsterName;
-        [SerializeField] int minHealth;
-        [SerializeField] int maxHealth;
-        [SerializeField] Element[] resists;
-        [SerializeField] Element[] weaknesses;
-        [SerializeField] Spell[] spells;
-        [SerializeField] Attack[] attacks;
+        
+        #endregion
     }
 }
-

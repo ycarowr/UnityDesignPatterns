@@ -1,5 +1,4 @@
-﻿
-namespace Prototype
+﻿namespace Prototype
 {
     //The Prototype interface declares the cloning methods. In most cases, it’s a single clone method.
     public interface ICloneable
@@ -15,23 +14,24 @@ namespace Prototype
 
         public ConcretePrototype(ConcretePrototype prototype)
         {
-            this.Name = prototype.Name;
+            Name = prototype.Name;
         }
-        
+
         public virtual ICloneable Clone()
         {
             return new ConcretePrototype(this);
         }
     }
-    
+
     public class AnotherPrototype : ConcretePrototype
     {
         public int Age;
+
         public AnotherPrototype(AnotherPrototype prototype) : base(prototype)
         {
             Age = prototype.Age;
         }
-        
+
         public override ICloneable Clone()
         {
             return new AnotherPrototype(this);
