@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Factory
-{
-    public class World : MonoBehaviour, ICreateable
+namespace FactoryMethod.World
+{   
+    public class World : MonoBehaviour, IFactory
     {
         public Continent[] Continents;
+
         [Button]
         public void Create()
         {
-            Continents = new Continent []
+            Continents = new Continent[]
             {
                 new EastEarth(),
                 new MiddleEarth(),
@@ -19,7 +18,7 @@ namespace Factory
 
             foreach (var continent in Continents)
                 continent.Create();
-            
+
             PrintWorld();
         }
 
@@ -32,14 +31,14 @@ namespace Factory
 
     //------------------------------------------------------------------------------------------------------------------
 
-    #region Abstractions
+    #region Factories
 
-    interface ICreateable
+    interface IFactory
     {
         void Create();
     }
 
-    public abstract class Continent : ICreateable
+    public abstract class Continent : IFactory
     {
         public Area[] Areas;
         public string Name = string.Empty;
@@ -47,47 +46,49 @@ namespace Factory
 
         public override string ToString()
         {
-            var s = String.Empty;
+            var s = string.Empty;
             s += Name + "\n";
             foreach (var area in Areas)
-                s += area.ToString() + "\n";
+                s += area + "\n";
             return s;
         }
     }
 
-    public abstract class Area: ICreateable
+    public abstract class Area : IFactory
     {
         public Creature[] Creatures;
         public Element[] Elements;
         public string Name = string.Empty;
         public abstract void Create();
-        
+
         public override string ToString()
         {
-            var s = String.Empty;
+            var s = string.Empty;
             s += Name + "\n";
             foreach (var c in Creatures)
-                s += c.ToString() + "\n";
+                s += c + "\n";
             foreach (var e in Elements)
-                s += e.ToString() + "\n";
+                s += e + "\n";
             return s;
         }
     }
 
-    public abstract class Element: ICreateable
+    public abstract class Element : IFactory
     {
         public string Name = string.Empty;
         public abstract void Create();
+
         public override string ToString()
         {
             return Name;
         }
     }
 
-    public abstract class Creature : ICreateable
+    public abstract class Creature : IFactory
     {
         public string Name = string.Empty;
         public abstract void Create();
+
         public override string ToString()
         {
             return Name;
@@ -120,7 +121,7 @@ namespace Factory
                 area.Create();
         }
     }
-    
+
     class EastEarth : Continent
     {
         public override void Create()
@@ -140,7 +141,7 @@ namespace Factory
                 area.Create();
         }
     }
-    
+
     class WestEarth : Continent
     {
         public override void Create()
@@ -165,14 +166,15 @@ namespace Factory
     #endregion
 
     //------------------------------------------------------------------------------------------------------------------
-    
+
     #region Areas
+
     class Island : Area
     {
         public override void Create()
         {
             Name = "Island";
-            
+
             var water1 = new Water();
             var water2 = new Water();
             var water3 = new Water();
@@ -181,16 +183,16 @@ namespace Factory
             {
                 water1, water2, water3
             };
-            
+
             foreach (var element in Elements)
                 element.Create();
-            
+
             var kraken = new Kraken();
             var leviathan = new Leviathan();
             var merfolk1 = new Merfolk();
             var merfolk2 = new Merfolk();
-            var merfolk3= new Merfolk();
-            
+            var merfolk3 = new Merfolk();
+
             Creatures = new Creature[]
             {
                 kraken, leviathan, merfolk1, merfolk2, merfolk3
@@ -206,7 +208,7 @@ namespace Factory
         public override void Create()
         {
             Name = "Forest";
-            
+
             var three1 = new Three();
             var three2 = new Three();
             var water = new Water();
@@ -215,16 +217,16 @@ namespace Factory
             {
                 three1, three2, water
             };
-            
+
             foreach (var element in Elements)
                 element.Create();
-            
+
             var elf = new Elf();
             var human = new Human();
             var animal1 = new Animal();
             var animal2 = new Animal();
             var beast = new Beast();
-            
+
             Creatures = new Creature[]
             {
                 elf, human, animal1, animal2, beast
@@ -240,7 +242,7 @@ namespace Factory
         public override void Create()
         {
             Name = "Mountain";
-            
+
             var fire = new Fire();
             var air = new Air();
             var earth1 = new Earth();
@@ -248,19 +250,19 @@ namespace Factory
 
             Elements = new Element[]
             {
-                air, earth1, earth2, fire 
+                air, earth1, earth2, fire
             };
-            
+
             foreach (var element in Elements)
                 element.Create();
-            
+
             var goblin = new Goblin();
             var human = new Human();
             var animal = new Animal();
             var orc = new Orc();
             var dwarf1 = new Dwarf();
             var dwarf2 = new Dwarf();
-            
+
             Creatures = new Creature[]
             {
                 goblin, human, animal, orc, dwarf1, dwarf2
@@ -276,7 +278,7 @@ namespace Factory
         public override void Create()
         {
             Name = "Swamp";
-            
+
             var three = new Three();
             var water1 = new Water();
             var water2 = new Water();
@@ -285,18 +287,18 @@ namespace Factory
 
             Elements = new Element[]
             {
-                three, water1, water2, earth1, earth2 
+                three, water1, water2, earth1, earth2
             };
-            
+
             foreach (var element in Elements)
                 element.Create();
-            
+
             var goblin = new Goblin();
             var human = new Human();
             var animal = new Animal();
             var orc1 = new Orc();
             var merfolk = new Merfolk();
-            
+
             Creatures = new Creature[]
             {
                 goblin, human, animal, orc1, merfolk
@@ -312,23 +314,23 @@ namespace Factory
         public override void Create()
         {
             Name = "Plains";
-            
+
             var earth1 = new Earth();
             var earth2 = new Earth();
 
             Elements = new Element[]
             {
-                earth1, earth2 
+                earth1, earth2
             };
-            
+
             foreach (var element in Elements)
                 element.Create();
-            
+
             var human1 = new Human();
             var human2 = new Human();
             var animal = new Animal();
             var orc = new Orc();
-            
+
             Creatures = new Creature[]
             {
                 human1, human2, animal, orc
@@ -337,14 +339,12 @@ namespace Factory
             foreach (var creature in Creatures)
                 creature.Create();
         }
-        
-        
     }
-    
+
     #endregion
-    
+
     //------------------------------------------------------------------------------------------------------------------
-    
+
     #region Elements
 
     class Water : Element
@@ -353,9 +353,8 @@ namespace Factory
         {
             Name = "Water";
         }
-        
     }
-    
+
     class Fire : Element
     {
         public override void Create()
@@ -363,7 +362,7 @@ namespace Factory
             Name = "Fire";
         }
     }
-    
+
     class Air : Element
     {
         public override void Create()
@@ -371,7 +370,7 @@ namespace Factory
             Name = "Air";
         }
     }
-    
+
     class Three : Element
     {
         public override void Create()
@@ -379,7 +378,7 @@ namespace Factory
             Name = "Three";
         }
     }
-    
+
     class Earth : Element
     {
         public override void Create()
@@ -387,11 +386,11 @@ namespace Factory
             Name = "Earth";
         }
     }
-    
+
     #endregion
-    
+
     //------------------------------------------------------------------------------------------------------------------
-    
+
     #region Creatures
 
     class Merfolk : Creature
@@ -409,7 +408,7 @@ namespace Factory
             Name = "Kraken";
         }
     }
-    
+
     class Leviathan : Creature
     {
         public override void Create()
@@ -417,7 +416,7 @@ namespace Factory
             Name = "Leviathan";
         }
     }
-    
+
     class Elf : Creature
     {
         public override void Create()
@@ -425,7 +424,7 @@ namespace Factory
             Name = "Elf";
         }
     }
-    
+
     class Beast : Creature
     {
         public override void Create()
@@ -433,7 +432,7 @@ namespace Factory
             Name = "Beast";
         }
     }
-    
+
     class Dwarf : Creature
     {
         public override void Create()
@@ -441,7 +440,7 @@ namespace Factory
             Name = "Dwarf";
         }
     }
-    
+
     class Human : Creature
     {
         public override void Create()
@@ -449,7 +448,7 @@ namespace Factory
             Name = "Human";
         }
     }
-    
+
     class Orc : Creature
     {
         public override void Create()
@@ -457,7 +456,7 @@ namespace Factory
             Name = "Orc";
         }
     }
-    
+
     class Goblin : Creature
     {
         public override void Create()
@@ -465,7 +464,7 @@ namespace Factory
             Name = "Goblin";
         }
     }
-    
+
     class Animal : Creature
     {
         public override void Create()
@@ -473,6 +472,6 @@ namespace Factory
             Name = "Animal";
         }
     }
-    
+
     #endregion
 }

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-namespace Factory
+namespace FactoryMethod
 {
     public class AiFactoryUsage : MonoBehaviour
     {
-        AiBase[] players = new AiBase[4];
-        
+        readonly AiFactory factory = new AiFactory();
+        readonly AiBase[] players = new AiBase[4];
+
         void Awake()
         {
             Populate();
@@ -14,14 +15,14 @@ namespace Factory
         [Button]
         void Populate()
         {
-            for (int i = 0; i < players.Length; i++)
-                players[i] = AiFactory.GetRandom();
+            for (var i = 0; i < players.Length; i++)
+                players[i] = factory.CreateRandom();
         }
 
         [Button]
         void DoPlayersMoves()
         {
-            for (int i = 0; i < players.Length; i++)
+            for (var i = 0; i < players.Length; i++)
             {
                 Debug.Log("Player [" + i + "]");
                 players[i].DoMove();
