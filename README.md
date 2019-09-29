@@ -1,4 +1,4 @@
-## DesignPatterns
+## Design Patterns in Unity3D
 
 On going studies about Design Patterns applied in Unity3D and C#.
 
