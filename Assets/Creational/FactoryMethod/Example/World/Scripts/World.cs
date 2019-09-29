@@ -178,10 +178,11 @@ namespace FactoryMethod.World
             var water1 = new Water();
             var water2 = new Water();
             var water3 = new Water();
+            var earth = new Earth();
 
             Elements = new Element[]
             {
-                water1, water2, water3
+                water1, water2, water3, earth
             };
 
             foreach (var element in Elements)
