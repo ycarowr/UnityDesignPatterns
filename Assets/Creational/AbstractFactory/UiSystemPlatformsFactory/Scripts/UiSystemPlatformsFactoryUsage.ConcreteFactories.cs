@@ -1,4 +1,3 @@
-
 namespace AbstractFactory
 {
     public partial class UiSystemPlatformsFactoryUsage

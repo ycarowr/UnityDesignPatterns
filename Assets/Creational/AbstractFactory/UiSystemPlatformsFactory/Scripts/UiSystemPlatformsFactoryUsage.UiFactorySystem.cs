@@ -18,7 +18,7 @@ namespace AbstractFactory
             IButton CreateButtonPs4();
             IWindow CreateWindowPs4();
         }
-        
+
         public class UiFactorySystem : IUiFactorySystem
         {
             readonly ButtonSystemFactory buttonFactory = new ButtonSystemFactory();

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Patterns;
+﻿using Patterns;
 using UnityEngine;
 
 namespace Singleton
@@ -14,7 +12,7 @@ namespace Singleton
 
         public void PrintRandomValue()
         {
-            Debug.Log("Random: " + UnityEngine.Random.Range(0, 1f));
+            Debug.Log("Random: " + Random.Range(0, 1f));
         }
     }
 }
