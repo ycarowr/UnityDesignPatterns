@@ -45,8 +45,8 @@
             {
                 Name = "Forest";
 
-                var three1 = new Three();
-                var three2 = new Three();
+                var three1 = new Tree();
+                var three2 = new Tree();
                 var water = new Water();
 
                 Elements = new Element[]
@@ -115,7 +115,7 @@
             {
                 Name = "Swamp";
 
-                var three = new Three();
+                var three = new Tree();
                 var water1 = new Water();
                 var water2 = new Water();
                 var earth1 = new Earth();

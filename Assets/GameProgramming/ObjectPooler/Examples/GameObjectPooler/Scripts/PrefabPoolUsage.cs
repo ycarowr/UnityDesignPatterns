@@ -4,8 +4,11 @@ namespace PrefabPool
 {
     public class PrefabPoolUsage : MonoBehaviour
     {
-        [Tooltip("The Pooler")][SerializeField] APooler Pooler;
-        [Tooltip("The Pooled GameObject")][SerializeField] GameObject[] Prefabs;
+        [Tooltip("The Pooler")] [SerializeField]
+        APooler Pooler;
+
+        [Tooltip("The Pooled GameObject")] [SerializeField]
+        GameObject[] Prefabs;
 
         [Button]
         //pool random object from inside prefabs array

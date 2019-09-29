@@ -28,11 +28,11 @@
             }
         }
 
-        class Three : Element
+        class Tree : Element
         {
             public override void Create()
             {
-                Name = "Three";
+                Name = "Tree";
             }
         }
 
