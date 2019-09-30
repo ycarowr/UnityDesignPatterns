@@ -17,10 +17,10 @@ When to use:
 
 Notes: 
 1. Don't go too fancy with FSMs because things can end up weird, keep the number of states manageable;
-2. It's fine to use more than one FSM, sometimes they will scratch each other with an ``if not state`` statement;
-3. There are cases to implement Sub State Machines deep inside a single state;
-4. Enum implementations are usually lighter than hierarchical ones because they don't have dinamic dispatcher, vtables.
-5. Push-Down Automata costs memory to keep track of what is stacked.
+2. It's fine to use more than one FSM, sometimes they will scratch each other's code with an ``if not state`` statement;
+3. There are cases to implement Sub State Machines inside a single state;
+4. Enum implementations are usually lighter than hierarchical ones because they don't have dinamic dispatcher, vtables...
+5. Push-Down Automata costs memory to keep the history (stack).
 
 ### Structure
 
@@ -76,7 +76,7 @@ Implementation on a simple enemy [Patrol](https://github.com/ycarowr/DesignPatte
 // ...
 ```
 
-The extendable more complex hierarchical implementation of [FSM](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/BaseStateMachine.cs) which can also behave as a PushDownAutomata and keep track of the previous states. Due the stack and the register allocations this implementation uses much more memory than the enum implementation.
+An alternative extendable and more complex hierarchical implementation of [FSM](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/BaseStateMachine.cs). This can also behave as a push-downa-automata and keep track of previous states. Due the stack and the register allocations this implementation uses much more memory than the enum implementation.
 
 [State Interface](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/StateMachine/Structure/IState.cs): Define the states operations.
 ```
