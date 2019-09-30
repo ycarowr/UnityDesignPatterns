@@ -16,14 +16,15 @@ When to use:
 4. Each object encapsulates a resource such as a database or network connection that is expensive to acquire and could be reused.
 
 Notes: 
-1. Remember to restart the object when you release it back to the pool. A just released object is most likely "dirty" and it might cause weird behaviors when you pool the object once again, mainly if it is a visual element.
-2. Reused objects are kept in memory. The Garbage Collector won't ever collect it.
+1. Remember to restart the object when you release it back to the pool. A released object is most likely "dirty" and it might cause weird behaviors when you pool the object once again.
+2. As anything else, the reused objects are kept in memory. In C#, the Garbage Collector won't ever collect them because the pool has references to all these memory adresses.
+3. We can have many variations of the Object Pooler, some of them target an interface and not concrete objects, sometimes the objects know about the pool existence and "free" themselves. It depends of the application necessities. 
 
 ### Structure
 
 Pooler: It is the entity which keeps track of the collection of busy and free objects, it provides a method to Release and Get an a pooled object.
 
-Pooled: An object that is frequently used by the application. 
+Pooled: An object that is frequently created and destroyed by the application. 
 
 Client: The entity that somehow interacts and manipulate the pooled objects. 
 
@@ -31,8 +32,7 @@ Client: The entity that somehow interacts and manipulate the pooled objects.
 
 #### Generic Pooler for Pure Csharp Classes
 
-We can have many variations of the Object Pooler, it depends of the application necessities. 
-Here you can find a more generic version for [Pure C# classes](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/GenericPooler.cs). It can be used to pool objects and avoid the heap fragmentation or leaks.
+Here you can find a generic version for [Pure C# classes](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/GenericPooler.cs) that can be used to pool objects and avoid the heap fragmentation or leaks.
 
 ```
     public class GenericPooler<T> where T : class, IPoolableObject, new()
@@ -56,7 +56,7 @@ Here you can find a more generic version for [Pure C# classes](https://github.co
 
 #### Prefab Pooler for GameObjects
 
-The [PrefabPooler](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/PrefabPooler.cs) is a bit more complex than the pure C# pooler because it pools GameObjects from the Unity3D engine. Those are most likely UI elements with models, particles, monobehaviors and other components that have an expensive cost for instantiation.
+The [PrefabPooler](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/PrefabPooler.cs) is a bit more complex than the pure C# version because it pools GameObjects from the engine. Those are most likely UI elements with particles, texts and more monobehaviors that possibly have an expensive initialization cost.
 
 Here a gif illustrating the pooler usage:
 ![img](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/Tests/Images/prefab.gif)
@@ -66,8 +66,6 @@ Here a gif illustrating the pooler usage:
 Here some [tests](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/Tests/Editor/GenericPoolerTest.cs) with the objet pooler: 
 
 ![omg](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/GameProgramming/ObjectPooler/Structure/Tests/Images/tdd%20generic%20pooler.GIF)
-
-
 
 References:
 1. Book [Game Programmings Patterns](https://gameprogrammingpatterns.com/object-pool.html)
