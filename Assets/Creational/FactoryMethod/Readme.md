@@ -7,31 +7,31 @@
 
 "It's a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created." 
 
+When to use it:
+1. when you don’t know beforehand the exact types and dependencies of the objects your code should work with;
+2. when you want to provide users of your API a way to extend its internal components;
+3. when you want to save system resources by reusing existing objects instead of rebuilding them each time.
+
 Notes: 
 1. "The advantage of a Factory Method is that it can return the same instance multiple times, or can return a subclass rather than an object of that exact type."
 2. "The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method."
 
-When to use it:
-1. when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
-2. when you want to provide users of your library or framework with a way to extend its internal components
-3. "when you want to save system resources by reusing existing objects instead of rebuilding them each time.", in this case the factory returns the same object multiple times saving a lot of memory.
-
 ### Structure
 
-1. Factory: The Creator class declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.
+1. Factory: It declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.
 ```
     public interface IFactory
     {
         IProduct Create();
     }
 ```
-2. Product: The Product declares the interface, which is common to all objects that can be produced by the creator and its subclasses.
+2. Product: The Product declares a common interface to all objects that can be produced by the factory abstraction.
 ```
     public interface IProduct
     {
     }
 ```
-3. Concrete Factories: Concrete Creators override the base factory method so it returns a different type of product.
+3. Concrete Factories: classes that override the base factory method and return a different type of product.
 ```
     public class FactoryA : IFactory
     {
