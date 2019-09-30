@@ -13,14 +13,18 @@
 
 ### Structure
 
-Subject: Is the observed object and target of a listener, usually when this object changes the state the interested listeners have to be notified.
+Subject: Is the observed object and target of a listener, when this object changes the state the interested listeners are notified.
 
 Listener: Is the observer of the subject, waits for any change on the interested object.
 
-Publisher: Usually is the object resposible to notify the listeners, it most likely has some sort of register to keep track of the listers and what they are watching.
+Publisher: It is the object resposible to notify the listeners, it has some sort of register to keep track of the listers and subjects.
 
 
-The implementation using Csharp native ``event`` sintax, which allows to create a subject inside a class and add subscribers from outside classes.
+### Implementation
+
+There are different ways to concebe the observer pattern. 
+
+The Csharp native ``event`` sintax allows to create a subject inside a class and add subscribers from outside classes.
 
 Implementation using [Actions](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/Observer/Structure/ObserverCsharpAction.cs) 
 ```
@@ -60,7 +64,7 @@ Implementation using [Delegates](https://github.com/ycarowr/DesignPatterns/blob/
 ```
 
 
-An alternative implementation that is more generic and universal. It has a [Publisher](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/Observer/Structure/Observer.cs) class to keep track of subjects, listeners and has holds the _Notify()_ method which is dispatched from other client classes. 
+An alternative implementation that is more generic and universal. It has a [Publisher](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavioral/Observer/Structure/Observer.cs) class to keep track of subjects, listeners and the _Notify()_ method to dispatch the events. 
 
 ```
         public void AddListener(IListener listener)
