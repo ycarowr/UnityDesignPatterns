@@ -92,10 +92,10 @@ The [Invoker](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behav
 
 Here are some variations of invokers implementations:
 1. The [Queue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/CommandQueue.cs) is First in First out structure that manipulates commands. 
-2. [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs), which works in a similar way, however it only dispatches commands only after an amount of time.
+2. [TimeredQueue](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Structure/Tools/TimeredCommandQueue.cs) works in a similar way, however it only dispatches commands only after an amount of time.
 
 #### Actor 
-An [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs)  with a method call and its parameters are the data encapsulated by the concrete commands. 
+An [Actor](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Actor/MotionEntity.cs), a method call and its parameters are the data encapsulated by the concrete commands. 
 The implementation depends completely of the application scope, in this case, a motion object.
 
 ```
@@ -110,7 +110,7 @@ The implementation depends completely of the application scope, in this case, a 
 ```
 
 #### Client
-The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker call in to dispatch commands.    
+The [Client](https://github.com/ycarowr/DesignPatterns/blob/master/Assets/Behavior/Command/Examples/AnimationQueue/Scripts/Client/AnimationClient.cs), makes requests to the invoker to dispatch the commands.    
 
 ```
         //...
