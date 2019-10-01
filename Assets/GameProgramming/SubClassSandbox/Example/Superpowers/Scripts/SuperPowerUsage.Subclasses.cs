@@ -21,12 +21,12 @@ namespace SubclassSandbox.Superpower
                 Move(amount);
             }
         }
-        
-        
+
+
         //Sub class power B
         public class Stampede : Superpower
         {
-            public  override void Activate()
+            public override void Activate()
             {
                 const int volume = 1;
                 PlaySound(SoundID.SoundStampede, volume);
@@ -39,7 +39,7 @@ namespace SubclassSandbox.Superpower
         //Sub class power C
         public class Dash : Superpower
         {
-            public  override void Activate()
+            public override void Activate()
             {
                 const int volume = 1;
                 PlaySound(SoundID.SoundDash, volume);

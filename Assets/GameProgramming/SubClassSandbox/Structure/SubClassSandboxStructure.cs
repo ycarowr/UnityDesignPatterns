@@ -20,13 +20,13 @@
                 //Do another thing
             }
         }
-        
-        
+
+
         //--------------------------------------------------------------------------------------------------------------
-        
+
         //The derived classes have access to the methods a common method in the parent class.
         //And they also can override an appropriated method to implement certain feature.
-        
+
         public class DerivedClassA : BaseClass
         {
             public override void VirtualMethodC()
@@ -34,7 +34,7 @@
                 //Override method C
             }
         }
-        
+
         public class DerivedClassB : BaseClass
         {
             public override void VirtualMethodC()
