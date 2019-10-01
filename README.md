@@ -15,6 +15,7 @@ On going studies about Design Patterns applied in Unity3D and C#.
 
 ### Game Programming Patterns
   1. [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
+  2. [Subclass Sandbox](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/GameProgramming/SubClassSandbox)
 
 ### References
 
