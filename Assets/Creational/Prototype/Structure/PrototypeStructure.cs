@@ -12,29 +12,17 @@
     {
         public string Name;
 
-        public ConcretePrototype(ConcretePrototype prototype)
-        {
-            Name = prototype.Name;
-        }
+        public ConcretePrototype(ConcretePrototype prototype) => Name = prototype.Name;
 
-        public virtual ICloneable Clone()
-        {
-            return new ConcretePrototype(this);
-        }
+        public virtual ICloneable Clone() => new ConcretePrototype(this);
     }
 
     public class AnotherPrototype : ConcretePrototype
     {
         public int Age;
 
-        public AnotherPrototype(AnotherPrototype prototype) : base(prototype)
-        {
-            Age = prototype.Age;
-        }
+        public AnotherPrototype(AnotherPrototype prototype) : base(prototype) => Age = prototype.Age;
 
-        public override ICloneable Clone()
-        {
-            return new AnotherPrototype(this);
-        }
+        public override ICloneable Clone() => new AnotherPrototype(this);
     }
 }

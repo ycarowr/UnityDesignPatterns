@@ -10,10 +10,7 @@ namespace FactoryMethod
     {
         public abstract string Move { get; }
 
-        public void DoMove()
-        {
-            Debug.Log("My AI move is: " + Move);
-        }
+        public void DoMove() => Debug.Log("My AI move is: " + Move);
     }
 
     #endregion

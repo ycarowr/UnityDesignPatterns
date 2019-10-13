@@ -67,10 +67,6 @@ namespace Patterns
         /// <summary>
         ///     Emits on empty event.
         /// </summary>
-        protected virtual void OnEmptyQueue()
-        {
-            OnEmpty?.Invoke();
-            // override to do something else.
-        }
+        protected virtual void OnEmptyQueue() => OnEmpty?.Invoke();
     }
 }

@@ -27,15 +27,9 @@ namespace AbstractFactory
             where TPs4 : TBase, new()
             where TXbox : TBase, new()
         {
-            public TPs4 CreatePs4()
-            {
-                return new TPs4();
-            }
+            public TPs4 CreatePs4() => new TPs4();
 
-            public TXbox CreateXbox()
-            {
-                return new TXbox();
-            }
+            public TXbox CreateXbox() => new TXbox();
 
             public TBase CreateSystem(RuntimePlatform platform)
             {

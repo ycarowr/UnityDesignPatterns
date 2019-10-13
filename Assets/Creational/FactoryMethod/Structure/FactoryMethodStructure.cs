@@ -32,18 +32,12 @@
 
     public class FactoryA : IFactory
     {
-        public IProduct Create()
-        {
-            return new ProductA();
-        }
+        public IProduct Create() => new ProductA();
     }
 
     public class FactoryB : IFactory
     {
-        public IProduct Create()
-        {
-            return new ProductB();
-        }
+        public IProduct Create() => new ProductB();
     }
 
     #endregion

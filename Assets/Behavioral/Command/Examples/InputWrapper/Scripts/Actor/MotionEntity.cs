@@ -11,9 +11,6 @@ namespace Command.InputWrapper
         ///     Moves the entity a certain amount.
         /// </summary>
         /// <param name="amount"></param>
-        public void Move(Vector3 amount)
-        {
-            transform.position += amount;
-        }
+        public void Move(Vector3 amount) => transform.position += amount;
     }
 }

@@ -13,10 +13,7 @@ namespace Patterns.StateMachine
         ///     Constructor for the state machine. A handler is optional.
         /// </summary>
         /// <param name="handler"></param>
-        protected BaseStateMachine(IStateMachineHandler handler = null)
-        {
-            Handler = handler;
-        }
+        protected BaseStateMachine(IStateMachineHandler handler = null) => Handler = handler;
 
         #endregion
 
@@ -108,19 +105,13 @@ namespace Patterns.StateMachine
         /// <summary>
         ///     Update the FSM, consequently, updating the state on the top of the stack.
         /// </summary>
-        public void Update()
-        {
-            Current?.OnUpdate();
-        }
+        public void Update() => Current?.OnUpdate();
 
         /// <summary>
         ///     Checks whether a Type is the same as the Type as the current state.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public bool IsCurrent<T>() where T : IState
-        {
-            return Current?.GetType() == typeof(T);
-        }
+        public bool IsCurrent<T>() where T : IState => Current?.GetType() == typeof(T);
 
         /// <summary>
         ///     Checks if a an StateType is the current state.
@@ -168,10 +159,7 @@ namespace Patterns.StateMachine
         ///     Peeks a state from the stack. A peek returns null if the stack is empty. It doesn't trigger any call.
         /// </summary>
         /// <returns></returns>
-        public IState PeekState()
-        {
-            return stack.Count > 0 ? stack.Peek() : null;
-        }
+        public IState PeekState() => stack.Count > 0 ? stack.Peek() : null;
 
         /// <summary>
         ///     Pops a state from the stack. It triggers OnExitState for the

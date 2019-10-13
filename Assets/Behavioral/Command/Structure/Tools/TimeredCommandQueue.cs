@@ -52,10 +52,8 @@ namespace Patterns
         /// </summary>
         /// <param name="command"></param>
         /// <param name="timeToEnqueue"></param>
-        public void EnqueueWithDelay(T command, float timeToEnqueue)
-        {
+        public void EnqueueWithDelay(T command, float timeToEnqueue) =>
             Enqueueing = StartCoroutine(TimeredEnqueue(command, timeToEnqueue));
-        }
 
         /// <summary>
         ///     Enqueues a

@@ -48,35 +48,17 @@ namespace CardStateMachine
 
         #region Operations
 
-        public void Hover()
-        {
-            PushState<UiCardHover>();
-        }
+        public void Hover() => PushState<UiCardHover>();
 
-        public void Disable()
-        {
-            PushState<UiCardDisable>();
-        }
+        public void Disable() => PushState<UiCardDisable>();
 
-        public void Idle()
-        {
-            PushState<UiCardIdle>();
-        }
+        public void Idle() => PushState<UiCardIdle>();
 
-        public void Drag()
-        {
-            PushState<UiCardDrag>();
-        }
+        public void Drag() => PushState<UiCardDrag>();
 
-        public void Draw()
-        {
-            PushState<UiCardDraw>();
-        }
+        public void Draw() => PushState<UiCardDraw>();
 
-        public void Discard()
-        {
-            PushState<UiCardDiscard>();
-        }
+        public void Discard() => PushState<UiCardDiscard>();
 
         #endregion
     }

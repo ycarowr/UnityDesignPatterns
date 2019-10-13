@@ -10,15 +10,9 @@ namespace CardStateMachine
 
         #region Initialization
 
-        void Awake()
-        {
-            Fsm = new UiCardFsm();
-        }
+        void Awake() => Fsm = new UiCardFsm();
 
-        void Update()
-        {
-            Fsm?.Update();
-        }
+        void Update() => Fsm?.Update();
 
         #endregion
 
@@ -28,46 +22,25 @@ namespace CardStateMachine
         #region Card Operations
 
         [Button]
-        public void Hover()
-        {
-            Fsm.Hover();
-        }
+        public void Hover() => Fsm.Hover();
 
         [Button]
-        public void Disable()
-        {
-            Fsm.Disable();
-        }
+        public void Disable() => Fsm.Disable();
 
         [Button]
-        public void Draw()
-        {
-            Fsm.Draw();
-        }
+        public void Draw() => Fsm.Draw();
 
         [Button]
-        public void Discard()
-        {
-            Fsm.Discard();
-        }
+        public void Discard() => Fsm.Discard();
 
         [Button]
-        public void Idle()
-        {
-            Fsm.Idle();
-        }
+        public void Idle() => Fsm.Idle();
 
         [Button]
-        public void Drag()
-        {
-            Fsm.Drag();
-        }
+        public void Drag() => Fsm.Drag();
 
         [Button]
-        public void Pop()
-        {
-            Fsm.PopState();
-        }
+        public void Pop() => Fsm.PopState();
 
         #endregion
 

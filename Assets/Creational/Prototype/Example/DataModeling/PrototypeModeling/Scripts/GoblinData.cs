@@ -25,7 +25,7 @@ namespace Prototype.Prototype
     public class GoblinData : ScriptableObject
     {
         // Goblin Data
-        
+
         [SerializeField] Attack[] attacks;
         [SerializeField] int maxHealth;
         [SerializeField] int minHealth;
@@ -35,23 +35,23 @@ namespace Prototype.Prototype
         [SerializeField] Element[] resists;
         [SerializeField] Spell[] spells;
         [SerializeField] Element[] weaknesses;
-        
+
         //-------------------------------------------------------------------------------------------------------------
-        
+
         #region Properties
-        
+
         // Properties fetch the data from the prototyped entity.
         // Which means that all goblins share that data.
         public int MinHealth => prototype.minHealth + minHealth;
         public int MaxHealth => prototype.maxHealth + maxHealth;
         public Element[] Resists => prototype.resists;
         public Element[] Weaknesses => prototype.weaknesses;
-        
-        
+
+
         public string MonsterName => monsterName;
         public Spell[] Spells => spells;
         public Attack[] Attacks => attacks;
-        
+
         #endregion
     }
 }

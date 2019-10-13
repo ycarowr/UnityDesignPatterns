@@ -11,22 +11,13 @@ namespace Command.UndoableMovement
         //Pointer to the animation queue.
         AnimationQueue AnimationQueue { get; set; }
 
-        void Awake()
-        {
-            AnimationQueue = GetComponent<AnimationQueue>();
-        }
+        void Awake() => AnimationQueue = GetComponent<AnimationQueue>();
 
         [Button]
-        void EnqueueMoveLeft()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
-        }
+        void EnqueueMoveLeft() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
 
         [Button]
-        void EnqueueMoveRight()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
-        }
+        void EnqueueMoveRight() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
 
         [Button]
         void AnimateRandomly()
@@ -48,9 +39,6 @@ namespace Command.UndoableMovement
         }
 
         [Button]
-        void Undo()
-        {
-            AnimationQueue.Undo();
-        }
+        void Undo() => AnimationQueue.Undo();
     }
 }

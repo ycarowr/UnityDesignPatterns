@@ -26,8 +26,8 @@ namespace SubclassSandbox.World
 
             //Creatures Speak!
             foreach (var continent in Continents)
-                foreach (var area in continent.Areas)
-                    area.Speak();
+            foreach (var area in continent.Areas)
+                area.Speak();
         }
     }
 }

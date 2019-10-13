@@ -28,10 +28,7 @@ namespace Patterns
 
         #region Invocators
 
-        static void StartGame()
-        {
-            OnStartGame();
-        }
+        static void StartGame() => OnStartGame();
 
         static void EndGame()
         {
@@ -41,20 +38,11 @@ namespace Patterns
             OnEndGame(a, b, c);
         }
 
-        static void PassTurn()
-        {
-            OnPassTurn();
-        }
+        static void PassTurn() => OnPassTurn();
 
-        static void StartTurn()
-        {
-            OnStartTurn();
-        }
+        static void StartTurn() => OnStartTurn();
 
-        static void EndTurn()
-        {
-            OnEndTurn();
-        }
+        static void EndTurn() => OnEndTurn();
 
         #endregion
     }

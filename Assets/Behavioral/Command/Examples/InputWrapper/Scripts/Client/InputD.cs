@@ -9,9 +9,6 @@ namespace Command.InputWrapper
     {
         protected override KeyCode Key => KeyCode.D;
 
-        protected override BaseMotion GetCommand()
-        {
-            return new MotionRight(MotionEntity);
-        }
+        protected override BaseMotion GetCommand() => new MotionRight(MotionEntity);
     }
 }

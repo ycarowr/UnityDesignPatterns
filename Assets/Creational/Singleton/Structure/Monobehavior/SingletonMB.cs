@@ -47,10 +47,7 @@ namespace Patterns
         ///     Setter for test purposes.
         /// </summary>
         /// <param name="instance"></param>
-        public void InjectInstance(T instance)
-        {
-            Instance = instance;
-        }
+        public void InjectInstance(T instance) => Instance = instance;
 
 
         //--------------------------------------------------------------------------------------------------------------

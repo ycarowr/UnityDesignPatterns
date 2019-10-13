@@ -23,24 +23,12 @@ namespace ExampleStateMachine
             RegisterState(endGame);
         }
 
-        public void PlayerTurn()
-        {
-            PushState(playerTurn);
-        }
+        public void PlayerTurn() => PushState(playerTurn);
 
-        public void AiTurn()
-        {
-            PushState(aiTurn);
-        }
+        public void AiTurn() => PushState(aiTurn);
 
-        public void StartGame()
-        {
-            PushState(startGame);
-        }
+        public void StartGame() => PushState(startGame);
 
-        public void EndGame()
-        {
-            PushState(endGame);
-        }
+        public void EndGame() => PushState(endGame);
     }
 }

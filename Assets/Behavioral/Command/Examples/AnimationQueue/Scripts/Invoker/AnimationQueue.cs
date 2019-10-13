@@ -30,10 +30,7 @@ namespace Command.AnimationQueue
         [Tooltip("The entity which will be affected by the animations.")] [SerializeField]
         MotionEntity Entity;
 
-        void Awake()
-        {
-            CreateCommands();
-        }
+        void Awake() => CreateCommands();
 
         void CreateCommands()
         {

@@ -5,9 +5,6 @@ namespace Singleton
     public class ASingletonInvoker : MonoBehaviour
     {
         [Button]
-        void PrintRandomValue()
-        {
-            ASingleton.Instance.PrintRandomValue();
-        }
+        void PrintRandomValue() => ASingleton.Instance.PrintRandomValue();
     }
 }

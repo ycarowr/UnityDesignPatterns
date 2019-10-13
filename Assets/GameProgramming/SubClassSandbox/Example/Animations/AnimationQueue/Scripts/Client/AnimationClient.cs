@@ -11,46 +11,25 @@ namespace SubclassSandbox.Animation
         //Pointer to the animation queue.
         AnimationQueue AnimationQueue { get; set; }
 
-        void Awake()
-        {
-            AnimationQueue = GetComponent<AnimationQueue>();
-        }
+        void Awake() => AnimationQueue = GetComponent<AnimationQueue>();
 
         [Button]
-        void EnqueueMoveLeft()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
-        }
+        void EnqueueMoveLeft() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveLeft);
 
         [Button]
-        void EnqueueMoveRight()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
-        }
+        void EnqueueMoveRight() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.MoveRight);
 
         [Button]
-        void EnqueueRotateLeft()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateLeft);
-        }
+        void EnqueueRotateLeft() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateLeft);
 
         [Button]
-        void EnqueueRotateRight()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateRight);
-        }
+        void EnqueueRotateRight() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.RotateRight);
 
         [Button]
-        void EnqueueScaleUp()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleUp);
-        }
+        void EnqueueScaleUp() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleUp);
 
         [Button]
-        void EnqueueScaleDown()
-        {
-            AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleDown);
-        }
+        void EnqueueScaleDown() => AnimationQueue.InvokeAnimation(AnimationQueue.AnimationType.ScaleDown);
 
         [Button]
         void AnimateRandomly()

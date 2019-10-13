@@ -21,10 +21,7 @@ namespace EnemyPatrol
         State Current { get; set; }
         Coroutine IdleRoutine { get; set; }
 
-        public void Initialize()
-        {
-            Next();
-        }
+        public void Initialize() => Next();
 
         enum State
         {

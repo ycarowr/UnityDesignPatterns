@@ -10,10 +10,7 @@ namespace Command.InputWrapper
         protected abstract KeyCode Key { get; }
         BaseMotion Command { get; set; }
 
-        void Start()
-        {
-            Command = GetCommand();
-        }
+        void Start() => Command = GetCommand();
 
         void Update()
         {

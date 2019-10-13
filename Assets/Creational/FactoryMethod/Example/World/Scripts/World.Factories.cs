@@ -49,10 +49,7 @@
             public string Name = string.Empty;
             public abstract void Create();
 
-            public override string ToString()
-            {
-                return Name;
-            }
+            public override string ToString() => Name;
         }
 
         public abstract class Creature : IFactory
@@ -60,10 +57,7 @@
             public string Name = string.Empty;
             public abstract void Create();
 
-            public override string ToString()
-            {
-                return Name;
-            }
+            public override string ToString() => Name;
         }
 
         #endregion

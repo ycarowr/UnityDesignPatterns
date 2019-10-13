@@ -7,10 +7,7 @@ namespace FactoryMethod
         readonly AiFactory factory = new AiFactory();
         readonly AiBase[] players = new AiBase[4];
 
-        void Awake()
-        {
-            Populate();
-        }
+        void Awake() => Populate();
 
         [Button]
         void Populate()

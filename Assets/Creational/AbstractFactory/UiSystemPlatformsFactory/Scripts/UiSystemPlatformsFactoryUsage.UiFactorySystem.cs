@@ -25,54 +25,27 @@ namespace AbstractFactory
             readonly InputSystemFactory inputFactory = new InputSystemFactory();
             readonly WindowSystemFactory windowFactory = new WindowSystemFactory();
 
-            public IInput CreateInput(RuntimePlatform platform)
-            {
-                return inputFactory.CreateSystem(platform);
-            }
+            public IInput CreateInput(RuntimePlatform platform) => inputFactory.CreateSystem(platform);
 
-            public IButton CreateButton(RuntimePlatform platform)
-            {
-                return buttonFactory.CreateSystem(platform);
-            }
+            public IButton CreateButton(RuntimePlatform platform) => buttonFactory.CreateSystem(platform);
 
-            public IWindow CreateWindow(RuntimePlatform platform)
-            {
-                return windowFactory.CreateSystem(platform);
-            }
+            public IWindow CreateWindow(RuntimePlatform platform) => windowFactory.CreateSystem(platform);
 
             //--------------------------------------------------------------------------------------------------------------
 
-            public IInput CreateInputXbox()
-            {
-                return inputFactory.CreateXbox();
-            }
+            public IInput CreateInputXbox() => inputFactory.CreateXbox();
 
-            public IButton CreateButtonXbox()
-            {
-                return buttonFactory.CreateXbox();
-            }
+            public IButton CreateButtonXbox() => buttonFactory.CreateXbox();
 
-            public IWindow CreateWindowXbox()
-            {
-                return windowFactory.CreateXbox();
-            }
+            public IWindow CreateWindowXbox() => windowFactory.CreateXbox();
 
             //--------------------------------------------------------------------------------------------------------------
 
-            public IInput CreateInputPs4()
-            {
-                return inputFactory.CreatePs4();
-            }
+            public IInput CreateInputPs4() => inputFactory.CreatePs4();
 
-            public IButton CreateButtonPs4()
-            {
-                return buttonFactory.CreateXbox();
-            }
+            public IButton CreateButtonPs4() => buttonFactory.CreateXbox();
 
-            public IWindow CreateWindowPs4()
-            {
-                return windowFactory.CreatePs4();
-            }
+            public IWindow CreateWindowPs4() => windowFactory.CreatePs4();
         }
     }
 }

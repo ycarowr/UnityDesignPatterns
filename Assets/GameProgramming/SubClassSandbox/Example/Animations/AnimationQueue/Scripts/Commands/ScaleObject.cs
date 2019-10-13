@@ -16,9 +16,6 @@ namespace SubclassSandbox.Animation
         public Vector3 Start { get; }
         public Vector3 Amount { get; }
 
-        public override void Execute()
-        {
-            MotionEntity.Scale(Amount);
-        }
+        public override void Execute() => MotionEntity.Scale(Amount);
     }
 }

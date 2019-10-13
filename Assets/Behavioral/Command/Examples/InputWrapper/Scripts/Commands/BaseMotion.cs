@@ -19,9 +19,6 @@ namespace Command.InputWrapper
         /// <summary>
         ///     Executes the movement.
         /// </summary>
-        public override void Execute()
-        {
-            MotionEntity.Move(Amount);
-        }
+        public override void Execute() => MotionEntity.Move(Amount);
     }
 }

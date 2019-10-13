@@ -24,20 +24,13 @@ namespace SubclassSandbox.Superpower
         {
             public abstract void Activate();
 
-            protected void PlaySound(SoundID soundId, float volume)
-            {
+            protected void PlaySound(SoundID soundId, float volume) =>
                 Debug.Log(GetType() + " Played sound " + soundId + " with volume " + volume);
-            }
 
-            protected void Move(Vector3 amount)
-            {
-                Debug.Log(GetType() + " Moved " + amount);
-            }
+            protected void Move(Vector3 amount) => Debug.Log(GetType() + " Moved " + amount);
 
-            protected void SpawnParticles(ParticleType type, int count)
-            {
+            protected void SpawnParticles(ParticleType type, int count) =>
                 Debug.Log(GetType() + " Spawned " + count + " particles of type " + type);
-            }
         }
 
         #endregion

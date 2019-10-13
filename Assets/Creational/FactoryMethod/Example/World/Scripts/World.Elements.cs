@@ -6,42 +6,27 @@
 
         class Water : Element
         {
-            public override void Create()
-            {
-                Name = "Water";
-            }
+            public override void Create() => Name = "Water";
         }
 
         class Fire : Element
         {
-            public override void Create()
-            {
-                Name = "Fire";
-            }
+            public override void Create() => Name = "Fire";
         }
 
         class Air : Element
         {
-            public override void Create()
-            {
-                Name = "Air";
-            }
+            public override void Create() => Name = "Air";
         }
 
         class Tree : Element
         {
-            public override void Create()
-            {
-                Name = "Tree";
-            }
+            public override void Create() => Name = "Tree";
         }
 
         class Earth : Element
         {
-            public override void Create()
-            {
-                Name = "Earth";
-            }
+            public override void Create() => Name = "Earth";
         }
 
         #endregion

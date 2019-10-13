@@ -29,15 +29,9 @@ namespace Patterns.GameEvents
         {
         }
 
-        void Start()
-        {
-            GameEvents.AddListener(this);
-        }
+        void Start() => GameEvents.AddListener(this);
 
-        void OnDestroy()
-        {
-            GameEvents.RemoveListener(this);
-        }
+        void OnDestroy() => GameEvents.RemoveListener(this);
     }
 
     #region Game Events Definition

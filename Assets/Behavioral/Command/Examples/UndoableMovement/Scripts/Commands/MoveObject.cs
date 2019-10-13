@@ -16,14 +16,8 @@ namespace Command.UndoableMovement
         public Vector3 Start { get; }
         public Vector3 Amount { get; }
 
-        public override void Execute()
-        {
-            MotionEntity.Move(Amount);
-        }
+        public override void Execute() => MotionEntity.Move(Amount);
 
-        public override void Undo()
-        {
-            MotionEntity.Move(-Amount);
-        }
+        public override void Undo() => MotionEntity.Move(-Amount);
     }
 }

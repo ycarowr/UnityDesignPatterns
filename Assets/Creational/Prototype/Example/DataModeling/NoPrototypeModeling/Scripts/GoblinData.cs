@@ -32,11 +32,11 @@ namespace Prototype.PrototypeLess
         [SerializeField] Element[] resists;
         [SerializeField] Spell[] spells;
         [SerializeField] Element[] weaknesses;
-        
+
         //-------------------------------------------------------------------------------------------------------------
 
         #region Properties
-        
+
         public string Name => monsterName;
 
         public int MinHealth => MinHealth;
@@ -50,7 +50,7 @@ namespace Prototype.PrototypeLess
         public Spell[] Spells => Spells;
 
         public Attack[] Attacks => Attacks;
-        
+
         #endregion
     }
 }

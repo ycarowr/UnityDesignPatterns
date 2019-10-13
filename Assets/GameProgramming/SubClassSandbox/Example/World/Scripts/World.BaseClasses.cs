@@ -40,17 +40,11 @@ namespace SubclassSandbox.World
         {
             protected readonly StringBuilder sBuilder = new StringBuilder("My name is ");
 
-            protected Creature()
-            {
-                sBuilder.Append(Name + "!");
-            }
+            protected Creature() => sBuilder.Append(Name + "!");
 
             public abstract string Name { get; }
 
-            public void Speak()
-            {
-                Debug.Log(sBuilder.ToString());
-            }
+            public void Speak() => Debug.Log(sBuilder.ToString());
         }
 
         public abstract class Element
@@ -58,10 +52,7 @@ namespace SubclassSandbox.World
             const string Activated = " Activated";
             public abstract string Name { get; }
 
-            public void Activate()
-            {
-                Debug.Log(Name + Activated);
-            }
+            public void Activate() => Debug.Log(Name + Activated);
         }
 
         #endregion

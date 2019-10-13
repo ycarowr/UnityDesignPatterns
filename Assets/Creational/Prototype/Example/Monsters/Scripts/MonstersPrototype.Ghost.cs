@@ -9,9 +9,6 @@ public partial class MonstersPrototype
         public int Health { get; }
         public int Speed { get; }
 
-        public override Monster Clone()
-        {
-            return new Ghost(Health, Speed);
-        }
+        public override Monster Clone() => new Ghost(Health, Speed);
     }
 }

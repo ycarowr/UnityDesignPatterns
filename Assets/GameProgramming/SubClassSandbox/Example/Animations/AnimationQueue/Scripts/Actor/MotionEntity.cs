@@ -11,19 +11,13 @@ namespace SubclassSandbox.Animation
         ///     Moves the entity a certain amount.
         /// </summary>
         /// <param name="amount"></param>
-        public void Move(Vector3 amount)
-        {
-            transform.position += amount;
-        }
+        public void Move(Vector3 amount) => transform.position += amount;
 
         /// <summary>
         ///     Scales the entity a certain amount.
         /// </summary>
         /// <param name="amount"></param>
-        public void Scale(Vector3 amount)
-        {
-            transform.localScale += amount;
-        }
+        public void Scale(Vector3 amount) => transform.localScale += amount;
 
         /// <summary>
         ///     Rotates the entity a certain amount.

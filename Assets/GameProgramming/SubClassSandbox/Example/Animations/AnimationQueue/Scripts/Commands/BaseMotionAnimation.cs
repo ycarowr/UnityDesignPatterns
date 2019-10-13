@@ -7,10 +7,7 @@ namespace SubclassSandbox.Animation
     /// </summary>
     public abstract class BaseMotionAnimation : Patterns.Command
     {
-        protected BaseMotionAnimation(IMotion entity)
-        {
-            MotionEntity = entity;
-        }
+        protected BaseMotionAnimation(IMotion entity) => MotionEntity = entity;
 
         public IMotion MotionEntity { get; }
 

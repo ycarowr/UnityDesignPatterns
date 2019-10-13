@@ -5,10 +5,7 @@ public class TurnBasedController : MonoBehaviour
 {
     readonly TurnBasedStateMachine TurnBasedFsm = new TurnBasedStateMachine();
 
-    void Awake()
-    {
-        TurnBasedFsm.Initialize();
-    }
+    void Awake() => TurnBasedFsm.Initialize();
 
     /*
        Avoiding the updating the Fsm because it is not necessary here.
@@ -19,26 +16,14 @@ public class TurnBasedController : MonoBehaviour
     */
 
     [Button]
-    public void PlayerTurn()
-    {
-        TurnBasedFsm.PlayerTurn();
-    }
+    public void PlayerTurn() => TurnBasedFsm.PlayerTurn();
 
     [Button]
-    public void AiTurn()
-    {
-        TurnBasedFsm.AiTurn();
-    }
+    public void AiTurn() => TurnBasedFsm.AiTurn();
 
     [Button]
-    public void StartGame()
-    {
-        TurnBasedFsm.StartGame();
-    }
+    public void StartGame() => TurnBasedFsm.StartGame();
 
     [Button]
-    public void EndGame()
-    {
-        TurnBasedFsm.EndGame();
-    }
+    public void EndGame() => TurnBasedFsm.EndGame();
 }
