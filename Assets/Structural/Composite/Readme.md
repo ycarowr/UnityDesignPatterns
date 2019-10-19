@@ -14,7 +14,7 @@ When to use:
 2. A class is getting massive and hard to work with.
 3. You want to be able to define a variety of objects that share different capabilities, but using inheritance doesn’t 
 let you pick the parts you want to reuse precisely enough.
-4. Composition vs Inheritence?
+4. It is an alternative to inheritence. Composition vs Inheritence?
 
 Notes: 
 1. The Component pattern adds a good bit of complexity over simply making a class and putting code in it.
