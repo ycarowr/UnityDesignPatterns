@@ -23,17 +23,44 @@ In performance-critical inner loops, this pointer following may lead to poor per
 
 ### Structure
 
-The [Component interface]() describes operations that are common to both simple and complex elements of the tree.
-
-The [Sub-Component]() Subcomponents are basic elements of a tree that doesn’t have sub-elements. Also called leaf,
+The *Component* interface describes operations that are common to both simple and complex elements of the tree.
+```
+        public interface IComponent
+        {
+            void Operate();
+        }
+```
+The *Sub-Component* Subcomponents are basic elements of a tree that doesn’t have sub-elements. Also called leaf,
 they end up doing most of the real work, since they don’t have anyone to delegate the work to.
-
-The [Component]() The Container is an element that has sub-elements: leaves or other containers. 
+```
+        public class SubComponent : IComponent
+        {
+            public void Operate()
+            {
+                //Do some work.
+            }
+        }
+```
+The *Component* The Container is an element that has sub-elements: leaves or other containers. 
 A container doesn’t know the concrete classes of its children. It works with all sub-elements only via the component interface. 
 Upon receiving a request, a container delegates the work to its sub-elements, processes intermediate results and then returns the final result to the client.
+```
+        public class Component : IComponent
+        {
+            readonly List<IComponent> _components = new List<IComponent>();
+            public void Operate()
+            {
+                foreach (var c in _components)
+                    c.Operate();
+            }
 
-The [Client]() The Client works with all elements through the component interface. 
-As a result, the client can work in the same way with both simple or complex elements of the tree.
+            public void AddComponent(IComponent c) => _components.Add(c);
+            public void RemoveComponent(IComponent c) => _components.Remove(c);
+            public IComponent GetComponent(int index) => _components[index];
+        }
+```
+
+The *Client* works with all elements through the component interface. As a result, the client can work in the same way with both simple or complex elements of the tree.
 
 References:
 1. Youtube [Derek Banas](https://www.youtube.com/watch?v=2HUnoKyC9l0&list=PLF206E906175C7E07&index=19&t=0s)
