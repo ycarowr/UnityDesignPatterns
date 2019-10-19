@@ -1,5 +1,9 @@
 ## Design Patterns in Unity3D
 
+This repository contains a variety of Design Patterns, it shows some basic description, when to use and notes about each specific pattern and the code structure with some examples developed by me. 
+
+Most of the of global references are listed on the bottom of this page, as well as more specific references are listed in each pattern description.
+
 A very good introduction to Design Patterns and why someone should learn then is described on the book Code Complete 2nd ed. by Steve McConnell, it says:
 
 *Design patterns provide the cores of ready-made solutions that can be used to solve many of software’s most common problems. Some software problems require solutions that are derived from first principles. But most problems are similar to past problems, and those can be solved using similar solutions, or patterns* ...
@@ -38,6 +42,9 @@ munication about them.*
 ### Game Programming Patterns
   1. [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
   2. [Subclass Sandbox](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/GameProgramming/SubClassSandbox)
+  
+### Structural Patterns
+  1. [Composite](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Structural/Composite)
 
 ### References
 
