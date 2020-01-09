@@ -1,4 +1,4 @@
-## Design Patterns in Unity3D
+# Programming Design Patterns in Unity3D & C#
 
 <details><summary> Why should you learn Design Patterns?
 </summary>
