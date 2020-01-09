@@ -1,10 +1,10 @@
 ## Design Patterns in Unity3D
 
-This repository contains a variety of Design Patterns, it shows some basic description, when to use and notes about each specific pattern and the code structure with some examples developed by me. 
+<details><summary> Why should you learn Design Patterns?
+</summary>
+<p>
 
-Most of the of global references are listed on the bottom of this page, as well as more specific references are listed in each pattern description.
-
-A very good introduction to Design Patterns and why someone should learn then is described on the book Code Complete 2nd ed. by Steve McConnell, it says:
+Code Complete 2nd ed. by Steve McConnell says:
 
 *Design patterns provide the cores of ready-made solutions that can be used to solve many of software’s most common problems. Some software problems require solutions that are derived from first principles. But most problems are similar to past problems, and those can be solved using similar solutions, or patterns* ...
 
@@ -27,6 +27,11 @@ munication about them.*
 
 *Another potential trap with patterns is feature-itis: using a pattern because of a desire to try out a pattern rather than because the pattern is an appropriate design solution. Overall, design patterns are a powerful tool for managing complexity."*
 
+
+</p>
+</details>
+
+The repository contains a variety of Design Patterns, some basic description, when to use and notes about each specific pattern and the code structure with some examples. Most of the of references are listed on the bottom of this page, as well as more specific references are listed in each pattern description.
 
 ### Behavioral Patterns
   1. [Command](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Command)
