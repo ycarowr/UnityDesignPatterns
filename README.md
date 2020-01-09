@@ -1,3 +1,4 @@
+[![Twitter](https://img.shields.io/twitter/follow/LagrangeSpot.svg?label=Follow@LagrangeSpot&style=social)](https://twitter.com/intent/follow?screen_name=LagrangeSpot)
 # Programming Design Patterns in Unity3D & C#
 
 <details><summary> Why should you learn Design Patterns?
