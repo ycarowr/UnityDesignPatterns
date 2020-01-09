@@ -27,11 +27,13 @@ munication about them.*
 
 *Another potential trap with patterns is feature-itis: using a pattern because of a desire to try out a pattern rather than because the pattern is an appropriate design solution. Overall, design patterns are a powerful tool for managing complexity."*
 
-
 </p>
 </details>
 
-The repository contains a variety of Design Patterns, some basic description, when to use and notes about each specific pattern and the code structure with some examples. Most of the of references are listed on the bottom of this page, as well as more specific references are listed in each pattern description.
+
+The repository contains a variety of Design Patterns with a basic description, when to use it, notes, the code structure and examples. 
+
+Most of the of references are listed on the bottom of this page, as well as more specific references are listed in each pattern description.
 
 ### Behavioral Patterns
   1. [Command](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Command)
