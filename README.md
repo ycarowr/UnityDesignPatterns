@@ -39,6 +39,7 @@ Most of the of references are listed on the bottom of this page, as well as more
   1. [Command](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Command)
   2. [Observer](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/Observer)
   3. [State Machine](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Behavioral/StateMachine)
+  4. [Strategy](https://github.com/ycarowr/UnityDesignPatterns/tree/master/Assets/Behavioral/Strategy)
 
 ### Creational Patterns
   1. [Abstract Factory](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/AbstractFactory)
