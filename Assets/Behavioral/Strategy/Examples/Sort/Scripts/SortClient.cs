@@ -11,7 +11,7 @@ namespace Strategy
      * it logs the time spent to sort the list. This way, for the same set
      * of elements we can compare how fast each sorting algorithm performs.
      */
-    public class SortComparison : MonoBehaviour
+    public class SortClient : MonoBehaviour
     {
         private enum SortType
         {

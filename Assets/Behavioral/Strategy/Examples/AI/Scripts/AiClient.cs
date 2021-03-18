@@ -10,7 +10,7 @@ namespace Strategy
      * The class provides the game state to different types of AI to
      * interact with. Therefore making them interchangeable and easy to test.
      */
-    public class AiComponent : MonoBehaviour
+    public class AiClient : MonoBehaviour
     {
         private enum AiType
         {
