@@ -1,9 +1,23 @@
 
 # Service Locator
 
+Intent: Provide a global point of access to a service without coupling users to the concrete class that implements it.
+
+When to use it: 
+- Reduce coupling between implementation and client objects.
+- Similar aspects as Singleton, used to provide global access.
+
+Problems:
+- The services have to be located. Not modular. Classes will rely in the Locator to work properly.
+- Is global. Any other class can poke it. 
+- Makes testing harder.
+
+Notes: 
+- Not use it extensively. Static and Singleton problems. 
+- Give the preference to pass services in instead using it (using constructor)
+- What happens if the service can’t be located? Use it alongside NullObject Pattern?
+- Services don't know who is locating them. It might be considered in some implementations.
+
 References:
-1. Youtube [Derek Banas](https://www.youtube.com/watch?v=AFbZhRL0Uz8&list=PLF206E906175C7E07&index=10&t=0s)
-2. Book [Game Programming Patterns](https://gameprogrammingpatterns.com/prototype.html)
-3. Github [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Creational%20Patterns/Prototype%20Pattern)
-4. Article,  [Source Making](https://sourcemaking.com/design_patterns/prototype)
-5. Article, code examples [Guru](https://refactoring.guru/design-patterns/prototype)
+1. Book [Game Programming Patterns](https://gameprogrammingpatterns.com/service-locator.html)
+2. Github [Qian Mo](https://github.com/QianMo/Unity-Design-Pattern/tree/master/Assets/Game%20Programming%20Patterns/Service%20Locator%20Pattern)
