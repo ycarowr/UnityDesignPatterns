@@ -15,7 +15,7 @@ Problems:
 Notes: 
 - Not use it extensively. Static and Singleton problems. 
 - Give the preference to pass services in instead using it (using constructor)
-- What happens if the service can’t be located? Use it alongside NullObject Pattern?
+- What happens if the service can’t be located/is missing? Use it alongside NullObject Pattern?
 - Services don't know who is locating them. It might be considered in some implementations.
 
 References:
