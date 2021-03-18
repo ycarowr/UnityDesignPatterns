@@ -6,6 +6,11 @@ using Random = UnityEngine.Random;
 
 namespace Strategy
 {
+    /*
+     * The class provides to different algorithms a list to be sorted and
+     * it logs the time spent to sort the list. This way, for the same set
+     * of elements we can compare how fast each sorting algorithm performs.
+     */
     public class SortComparison : MonoBehaviour
     {
         private enum SortType
