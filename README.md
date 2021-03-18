@@ -46,6 +46,7 @@ Most of the of references are listed on the bottom of this page, as well as more
   2. [Factory Method](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/FactoryMethod)
   3. [Singleton](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/Creational/Singleton)
   4. [Prototype](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Creational/Prototype)
+  5. [Service Locator](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Creational/ServiceLocator)
 
 ### Game Programming Patterns
   1. [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
