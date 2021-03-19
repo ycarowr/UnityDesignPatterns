@@ -13,20 +13,9 @@ namespace TypeObject.SO
             Attack();
             CheckHealth();
         }
-        
-        [Button]
-        public void CreateBreeds()
-        {
-            // _water = new Breed(null, "Make a pond!", 40);
-            // _fire = new Breed(null, "Incineration Blaze!", 30);
-            //
-            // //Lava overrides the only the health
-            // _lava = new Breed(_fire, null, 45);
-        }
-
 
         [Button]
-        public void Attack()
+        private void Attack()
         {
             foreach (var i in monsters)
             {
@@ -35,7 +24,7 @@ namespace TypeObject.SO
         }
         
         [Button]
-        public void CheckHealth()
+        private void CheckHealth()
         {
             foreach (var i in monsters)
             {
