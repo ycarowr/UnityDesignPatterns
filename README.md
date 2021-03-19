@@ -51,6 +51,7 @@ Most of the of references are listed on the bottom of this page, as well as more
   1. [Object Pool](https://github.com/ycarowr/DesignPatterns/tree/master/Assets/GameProgramming/ObjectPooler)
   2. [Subclass Sandbox](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/GameProgramming/SubClassSandbox)
   3. [Service Locator](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/GameProgramming/ServiceLocator)
+  4. [Type Object](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/GameProgramming/TypeObject)
   
 ### Structural Patterns
   1. [Composite](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Structural/Composite)
