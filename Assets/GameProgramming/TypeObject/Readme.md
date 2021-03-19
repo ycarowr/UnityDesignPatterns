@@ -5,6 +5,8 @@
 
 "Define a type object class and a typed object class. Each type object instance represents a different logical type. Each typed object stores a reference to the type object that describes its type."
 
+Basically replace overriden methods by an object that wraps the behavior/data. And use it for all instances that share it. It is another way to move away from inheritance.
+
 ## When use it
 
 1. You don’t know what types you will need up front
