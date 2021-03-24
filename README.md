@@ -55,6 +55,7 @@ Most of the of references are listed on the bottom of this page, as well as more
   
 ### Structural Patterns
   1. [Composite](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Structural/Composite)
+  2. [Bridge](https://github.com/ycarowr/Unity-Design-Patterns/tree/master/Assets/Structural/Bridge)
 
 ### References
 
