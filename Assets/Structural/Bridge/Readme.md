@@ -1,5 +1,5 @@
 
-# Composition - Component
+# Bridge
 
 ## Definitions
 
